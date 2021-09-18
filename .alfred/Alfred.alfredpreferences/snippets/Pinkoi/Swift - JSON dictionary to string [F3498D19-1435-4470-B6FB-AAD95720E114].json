@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "let jsonData = try! JSONSerialization.data(withJSONObject: dataDic!, options: .prettyPrinted)\n            let jsonStr = String(data: jsonData, encoding: .utf8)!\n            print(jsonStr)",
+    "uid" : "F3498D19-1435-4470-B6FB-AAD95720E114",
+    "name" : "Swift - JSON dictionary to string",
+    "keyword" : ""
+  }
+}
