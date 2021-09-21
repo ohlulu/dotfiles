@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ii - collectionview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func makeCollectionView(with layout: UICollectionViewLayout) -&gt; UICollectionView {
+       let flowLayout = UICollectionViewFlowLayout()
+       flowLayout.itemSize = CGSize(width: &lt;#T##CGFloat#&gt;, height: &lt;#T##CGFloat#&gt;)
+       flowLayout.scrollDirection = &lt;#UICollectionViewScrollDirection#&gt;
+       flowLayout.minimumLineSpacing = &lt;#CGFloat#&gt;
+       flowLayout.minimumInteritemSpacing = &lt;#CGFloat#&gt;
+       
+       let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+       collectionView.delegate = self
+       collectionView.dataSource = self
+       collectionView.register(&lt;#Cell#&gt;.self)
+       collectionView.showsHorizontalScrollIndicator = &lt;#Bool#&gt;
+       collectionView.showsVerticalScrollIndicator = &lt;#Bool#&gt;
+       collectionView.backgroundColor = UIColor.PinkoiColor&lt;#Color#&gt;
+       return collectionView
+   }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F1F7974D-BC4B-4F50-9FD0-BECD87336D2E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UICollectionView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Pinkoi - UICollectionView Initializer</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>oo - view</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private lazy
+    var &lt;#name#&gt;View = UIView().oh
+        .backgroundColor(&lt;#T##backgroundColor: UIColor##UIColor#&gt;)
+        .cornerRadius(&lt;#T##cornerRadius: CGFloat##CGFloat#&gt;)
+        .addShadow(color: &lt;#T##UIColor#&gt;, radius: &lt;#T##CGFloat#&gt;, offsetX: &lt;#T##CGFloat#&gt;, y: &lt;#T##CGFloat#&gt;, opacity: &lt;#T##Float#&gt;)
+        .done()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2E98AD0F-CBD6-45E0-8898-DC96C0528C09</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UIView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>OhSwifter - UIView Initializer</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
