@@ -1,0 +1,88 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "romkatv/powerlevel10k"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Extensions to follow Vincent Driessen's branching model
+brew "git-flow", link: false
+# AVH edition of git-flow
+brew "git-flow-avh"
+# Install and debug iPhone apps from the command-line
+brew "ios-deploy"
+# Keep your Mac's application settings in sync
+brew "mackup"
+# Mac App Store command-line interface
+brew "mas"
+# Dependency manager that installs and runs Swift command-line tool packages
+brew "mint"
+# Install various Ruby versions and implementations
+brew "ruby-build"
+# Ruby version manager
+brew "rbenv"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Formatting tool for reformatting Swift code
+brew "swiftformat"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Generate your Xcode project from a spec file and your folder structure
+brew "xcodegen"
+# UNIX shell (command interpreter)
+brew "zsh"
+# A Zsh Theme
+brew "romkatv/powerlevel10k/powerlevel10k"
+# Application launcher and productivity software
+cask "alfred", args: { appdir: "/Applications" }
+# Tool to customize input devices and automate computer systems
+cask "bettertouchtool", args: { appdir: "/Applications" }
+# Screen color temperature controller
+cask "flux", args: { appdir: "/Applications" }
+cask "font-inconsolata", args: { appdir: "/Applications" }
+# GIT client
+cask "fork", args: { appdir: "/Applications" }
+# Web browser
+cask "google-chrome", args: { appdir: "/Applications" }
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2", args: { appdir: "/Applications" }
+# Menu bar calendar
+cask "itsycal", args: { appdir: "/Applications" }
+# App to write, plan, collaborate, and get organized
+cask "notion", args: { appdir: "/Applications" }
+# HTTP client that helps testing and describing APIs
+cask "paw", args: { appdir: "/Applications" }
+# Collaboration platform for API development
+cask "postman", args: { appdir: "/Applications" }
+# Modern and intuitive HTTP Debugging Proxy app
+cask "proxyman", args: { appdir: "/Applications" }
+# Powerful runtime view debugging for iOS developers
+cask "reveal", args: { appdir: "/Applications" }
+# Team communication and collaboration software
+cask "slack", args: { appdir: "/Applications" }
+# Editor for localizable files
+cask "stringz", args: { appdir: "/Applications" }
+# Xcode Extension for reformatting Swift code
+cask "swiftformat-for-xcode", args: { appdir: "/Applications" }
+# Desktop client for Telegram messenger
+cask "telegram-desktop", args: { appdir: "/Applications" }
+# Configurable document editor that supports Markdown
+cask "typora", args: { appdir: "/Applications" }
+# Open-source code editor
+cask "visual-studio-code", args: { appdir: "/Applications" }
+# Install and switch between multiple versions of Xcode
+cask "xcodes", args: { appdir: "/Applications" }
+# Share, organize and collaborate on designs
+cask "zeplin", args: { appdir: "/Applications" }
+mas "DevCleaner", id: 1388020431
+mas "Dynamic Wallpaper", id: 1453504509
+mas "LINE", id: 539883307
+mas "Microsoft Excel", id: 462058435
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "RunCat", id: 1429033973
+mas "Translate Tab", id: 458887729
