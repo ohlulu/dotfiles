@@ -24,3 +24,12 @@ cd ~/.macOS
 sh install.sh
 ```
 
+## Oh-My-ZSH
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## Font: Inconsolata
+
+https://fonts.google.com/specimen/Inconsolata
