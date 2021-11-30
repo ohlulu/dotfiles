@@ -11,18 +11,20 @@
 	<key>hotkey</key>
 	<dict>
 		<key>key</key>
-		<integer>8</integer>
+		<integer>6</integer>
 		<key>mod</key>
 		<integer>1179648</integer>
 		<key>string</key>
-		<string>C</string>
+		<string>Z</string>
 	</dict>
+	<key>ignoreRemoteClipboard</key>
+	<true/>
 	<key>limit</key>
 	<integer>2</integer>
 	<key>persistFor</key>
 	<integer>2</integer>
 	<key>persistForFiles</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>persistForImages</key>
 	<integer>1</integer>
 	<key>snippetKeyword</key>
