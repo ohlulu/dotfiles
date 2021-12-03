@@ -13,3 +13,50 @@
 	template = /Users/ohlulu/.gitmessage.txt
 [http]
 	postBuffer = 157286400
+
+# [color "remote"]
+# error = red
+# fatal = red
+# warning = yellow
+# hint = yellow
+# success = green
+
+# [color "branch"]
+# local = yellow dim
+# remote = red dim
+# current = green bold
+
+# [color "diff"]
+# # meta = 227
+# frag = magenta dim
+# old = red
+# new = green
+# normal = white dim
+# context = white dim
+
+# [color "status"]
+# untracked = red
+# added = green
+# branch = red bold
+# header = white dim
+# # changed = 227
+# updated = cyan
+# unmerged = red bold
+
+# [color "push"]
+# header = white dim
+
+# [merge]
+# tool = opendiff
+
+# [push]
+# default = current
+# header = white dim
+
+# # [core]
+# # editor = subl -n -w
+
+# [pager]
+# branch = false
+# # diff = diff-so-fancy | less --tabs=1,5 -RFX
+# # show = diff-so-fancy | less --tabs=1,5 -RFX
