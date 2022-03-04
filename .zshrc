@@ -11,6 +11,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ohlulu/.oh-my-zsh"
 
+# export PATH="$HOME/bin/.mint:$PATH"
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -120,3 +123,5 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias gg='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+export PATH="$HOME/.mint/bin:$PATH"

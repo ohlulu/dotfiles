@@ -3,25 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oo - imageview</string>
+	<string>oo button</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy
-var &lt;#name#&gt;imageView = UIImageView(image: &lt;#image#&gt;).oh
-            .contentMode(.scaleAspectFill)
-            .clipsToBounds(true)
-            .done()</string>
+	<string>func make&lt;#name#&gt;Button() -&gt; UIButton {
+    let button = UIButton()
+    return button
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>450EC978-00E5-45E9-AC13-32E74DE09E1A</string>
+	<string>41ED9C8D-6665-443F-B44A-BC196A2A8B27</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>OhSwifter - UIimageView Initializer </string>
+	<string>oo-Button</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

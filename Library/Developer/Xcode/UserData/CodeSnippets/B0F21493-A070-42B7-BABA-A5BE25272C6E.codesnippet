@@ -3,28 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>BindingBlock</string>
+	<string>oo position</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: Binding
-
-private extension &lt;#UIViewController#&gt; {
-    
-    func setupBindgin() {
-        
-    }
-}</string>
+	<string>file: StaticString = #file, line: UInt = #line</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E81D8481-E702-4ECE-B763-067D2E35795D</string>
+	<string>B0F21493-A070-42B7-BABA-A5BE25272C6E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>BindingBlock</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>BindingBlock</string>
+	<string>Test: posotion ( file: _, line: _ )</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

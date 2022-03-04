@@ -3,26 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oo - view</string>
+	<string>oo makeSUT</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy
-    var &lt;#name#&gt;View = UIView().oh
-        .backgroundColor(&lt;#T##backgroundColor: UIColor##UIColor#&gt;)
-        .cornerRadius(&lt;#T##cornerRadius: CGFloat##CGFloat#&gt;)
-        .addShadow(color: &lt;#T##UIColor#&gt;, radius: &lt;#T##CGFloat#&gt;, offsetX: &lt;#T##CGFloat#&gt;, y: &lt;#T##CGFloat#&gt;, opacity: &lt;#T##Float#&gt;)
-        .done()</string>
+	<string>func makeSUT(file: StaticString = #filePath, line: UInt = #line) -&gt; &lt;#System under test#&gt; {
+        let sut = &lt;#System under test#&gt;
+        trackMemoryLeaks(sut, file: file, line: line)
+        return sut
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>2E98AD0F-CBD6-45E0-8898-DC96C0528C09</string>
+	<string>9C816ABA-FE7C-4C54-8781-E1715F15C67D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>UIView</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>OhSwifter - UIView Initializer</string>
+	<string>oo-makeSUT</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
