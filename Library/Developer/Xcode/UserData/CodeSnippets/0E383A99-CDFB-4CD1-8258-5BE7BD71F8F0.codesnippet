@@ -3,28 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oo makeSUT</string>
+	<string>ii - stackview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>func makeSUT(file: StaticString = #filePath, line: UInt = #line) -&gt; &lt;#System under test#&gt; {
-        let sut = &lt;#System under test#&gt;
-        trackMemoryLeaks(sut, file: file, line: line)
-        return sut
+	<string>func make&lt;#name#&gt;StackView() -&gt; UIStackView {
+        let stackView = UIStackView()
+        stackView.axis = &lt;#UILayoutConstraintAxis#&gt;
+        stackView.distribution = &lt;#UIStackViewDistribution#&gt;
+        stackView.alignment = &lt;#UIStackViewAlignment#&gt;
+        stackView.spacing = &lt;#CGFloat#&gt;
+        return stackView
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>9C816ABA-FE7C-4C54-8781-E1715F15C67D</string>
+	<string>0E383A99-CDFB-4CD1-8258-5BE7BD71F8F0</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>oo-makeSUT</string>
+	<string>Make - UIStackView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

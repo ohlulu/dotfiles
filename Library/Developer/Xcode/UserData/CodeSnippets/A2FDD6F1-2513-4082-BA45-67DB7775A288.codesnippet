@@ -10,7 +10,8 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>func make&lt;#Container#&gt;View() -&gt; UIView {
-        
+        let view = UIView()
+        return view
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A2FDD6F1-2513-4082-BA45-67DB7775A288</string>
@@ -19,7 +20,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Pinkoi - make method  - view</string>
+	<string>Make - UIView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

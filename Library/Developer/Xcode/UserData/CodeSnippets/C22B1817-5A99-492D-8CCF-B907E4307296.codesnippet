@@ -3,26 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ii - label</string>
+	<string>ii - imageview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    let label = UILabel()
-    label.font = .systemFont(ofSize: &lt;#T##CGFloat#&gt;, weight: &lt;#T##UIFont.Weight#&gt;)
-    label.textColor = &lt;#UIColor#&gt;
-    label.numberOfLines = &lt;#numberOfLines#&gt;
-    label.textAlignment = &lt;#textAlignment#&gt;
-    return label</string>
+	<string>func make&lt;#name#&gt;ImageView() -&gt; UIImageView {
+        let imageView = UIImageView(image: &lt;#T##UIImage?#&gt;)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>015A6393-7520-4E88-8AE7-7BBE9F63C686</string>
+	<string>C22B1817-5A99-492D-8CCF-B907E4307296</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>UILabel</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Pinkoi - UILabel Initializer</string>
+	<string>Make - UIImageView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

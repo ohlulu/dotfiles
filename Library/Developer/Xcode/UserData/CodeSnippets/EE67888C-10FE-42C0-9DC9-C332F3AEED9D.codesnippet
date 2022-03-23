@@ -3,20 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>DequeueReusable cell</string>
+	<string>ii - label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let cell: &lt;#UITableViewCell.class#&gt; = tableView.dequeueReusable(indexPath: indexPath)
-        return cell</string>
+	<string>func make&lt;#name#&gt;Label() -&gt; UILabel {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: &lt;#T##CGFloat#&gt;, weight: &lt;#T##UIFont.Weight#&gt;)
+        label.textColor = &lt;#UIColor#&gt;
+        label.numberOfLines = &lt;#numberOfLines#&gt;
+        label.textAlignment = &lt;#textAlignment#&gt;
+        return label
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B654D802-646D-4C65-9515-A71BC04B9602</string>
+	<string>EE67888C-10FE-42C0-9DC9-C332F3AEED9D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DequeueReusable cell</string>
+	<string>Make - UILabel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
