@@ -10,6 +10,8 @@
 	<false/>
 	<key>clearKeywordEnabled</key>
 	<false/>
+	<key>fastAppend</key>
+	<true/>
 	<key>hotkey</key>
 	<dict>
 		<key>key</key>
@@ -19,8 +21,6 @@
 		<key>string</key>
 		<string>C</string>
 	</dict>
-	<key>ignoreRemoteClipboard</key>
-	<true/>
 	<key>limit</key>
 	<integer>2</integer>
 	<key>persistFor</key>

@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>darkthemeuid</key>
-	<string>theme.fileimport.B537DCF8-D8C5-4225-A4AC-71A7A1BB71DF</string>
+	<key>volumemuteKeyword</key>
+	<string>mt</string>
 </dict>
 </plist>
