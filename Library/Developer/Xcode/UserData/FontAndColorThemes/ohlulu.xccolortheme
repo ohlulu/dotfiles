@@ -59,15 +59,15 @@
 	<key>DVTMarkupTextOtherHeadingColor</key>
 	<string>0.976471 0.972549 0.960784 0.5</string>
 	<key>DVTMarkupTextOtherHeadingFont</key>
-	<string>.SFNS-Regular - 26.2</string>
+	<string>.SFNS-Regular - 26.6</string>
 	<key>DVTMarkupTextPrimaryHeadingColor</key>
 	<string>0.976471 0.972549 0.960784 1</string>
 	<key>DVTMarkupTextPrimaryHeadingFont</key>
-	<string>.SFNS-Regular - 44.2</string>
+	<string>.SFNS-Regular - 45.6</string>
 	<key>DVTMarkupTextSecondaryHeadingColor</key>
 	<string>0.976471 0.972549 0.960784 1</string>
 	<key>DVTMarkupTextSecondaryHeadingFont</key>
-	<string>.SFNS-Regular - 33.4</string>
+	<string>.SFNS-Regular - 34.2</string>
 	<key>DVTMarkupTextStrongColor</key>
 	<string>0.976471 0.972549 0.960784 1</string>
 	<key>DVTMarkupTextStrongFont</key>
