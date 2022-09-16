@@ -14,19 +14,7 @@ echo "Start install macOS perference."
 
 DIR="$(dirname $0)"
 
-source $DIR/date_time.sh
-source $DIR/dock.sh
-source $DIR/finder.sh
-source $DIR/general.sh
-source $DIR/google_chrome.sh
-source $DIR/keyboard.sh
-source $DIR/mac_app_store.sh
-source $DIR/mission_control.sh
-source $DIR/other.sh
-source $DIR/safari_web_kit.sh
-source $DIR/screen.sh
-source $DIR/sharing.sh
-source $DIR/trackpad.sh
+source $DIR/macOS.sh
 
 # Kill affected applications
 for app in "Activity Monitor" \
