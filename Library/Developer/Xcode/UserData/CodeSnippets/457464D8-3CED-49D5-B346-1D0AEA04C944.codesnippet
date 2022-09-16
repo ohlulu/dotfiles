@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>wes</string>
+	<string>ii - cancellables</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self]</string>
+	<string>private var cancellables = Set&lt;AnyCancellable&gt;()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8AB6320C-6AA0-4403-8363-66131521AC82</string>
+	<string>457464D8-3CED-49D5-B346-1D0AEA04C944</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>[weak self]</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ii - [weak self]</string>
+	<string>Make - Set&lt;AnyCancellable&gt;()</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

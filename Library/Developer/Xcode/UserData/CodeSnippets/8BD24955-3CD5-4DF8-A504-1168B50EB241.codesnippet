@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>wes</string>
+	<string>callback</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self]</string>
+	<string>var &lt;#callback#&gt;: (() -&gt; Void)?</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8AB6320C-6AA0-4403-8363-66131521AC82</string>
+	<string>8BD24955-3CD5-4DF8-A504-1168B50EB241</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>[weak self]</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ii - [weak self]</string>
+	<string>Closure</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
