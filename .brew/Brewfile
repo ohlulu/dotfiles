@@ -3,6 +3,11 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "romkatv/powerlevel10k"
+A cat(1) clone with syntax highlighting and Git integration.
+
+# A cat(1) clone with syntax highlighting and Git integration.
+# https://github.com/sharkdp/bat
+brew "bat"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # GNU File, Shell, and Text utilities
@@ -37,10 +42,14 @@ brew "xcodegen"
 brew "zsh"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
+# exa is a modern replacement for ls.
+# https://github.com/ogham/exa
+brew "exa"
 
 #########################################################################
 # cask                                                                  #
 #########################################################################
+
 # Application launcher and productivity software
 cask "alfred", args: { appdir: "/Applications" }
 # Tool to customize input devices and automate computer systems
