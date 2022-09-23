@@ -37,6 +37,10 @@ brew "xcodegen"
 brew "zsh"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
+
+#########################################################################
+# cask                                                                  #
+#########################################################################
 # Application launcher and productivity software
 cask "alfred", args: { appdir: "/Applications" }
 # Tool to customize input devices and automate computer systems
@@ -55,11 +59,7 @@ cask "itsycal", args: { appdir: "/Applications" }
 # App to write, plan, collaborate, and get organized
 cask "notion", args: { appdir: "/Applications" }
 # HTTP client that helps testing and describing APIs
-cask "paw", args: { appdir: "/Applications" }
-# Collaboration platform for API development
 cask "postman", args: { appdir: "/Applications" }
-# Modern and intuitive HTTP Debugging Proxy app
-cask "proxyman", args: { appdir: "/Applications" }
 # Powerful runtime view debugging for iOS developers
 cask "reveal", args: { appdir: "/Applications" }
 # Team communication and collaboration software
@@ -68,8 +68,6 @@ cask "slack", args: { appdir: "/Applications" }
 cask "stringz", args: { appdir: "/Applications" }
 # Xcode Extension for reformatting Swift code
 cask "swiftformat-for-xcode", args: { appdir: "/Applications" }
-# Desktop client for Telegram messenger
-cask "telegram-desktop", args: { appdir: "/Applications" }
 # Configurable document editor that supports Markdown
 cask "typora", args: { appdir: "/Applications" }
 # Open-source code editor
