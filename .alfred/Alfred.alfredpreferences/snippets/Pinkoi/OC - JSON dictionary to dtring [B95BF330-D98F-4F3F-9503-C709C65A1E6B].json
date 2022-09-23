@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dataDic options:NSJSONWritingPrettyPrinted error:NULL];\n        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];\n        DDLogInfo(@\"%@\",jsonStr);",
-    "uid" : "B95BF330-D98F-4F3F-9503-C709C65A1E6B",
-    "name" : "OC - JSON dictionary to dtring",
-    "keyword" : "!ocjson"
-  }
-}
