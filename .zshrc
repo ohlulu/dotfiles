@@ -135,3 +135,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # export PATH="~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
 
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
+
+# terminal vim
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
