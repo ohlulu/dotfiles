@@ -132,3 +132,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source /Users/ohlulu/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# export PATH="~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
+
