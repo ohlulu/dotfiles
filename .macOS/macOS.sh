@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -28,11 +30,17 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2
 
 # Enable three finger drag
+# defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+# defaults -currentHost write -g com.apple.trackpad.threeFingerDragGesture -bool true
+# defaults -currentHost write -g com.apple.trackpad.threeFingerHorizSwipeGesture -int 0
+# defaults -currentHost write -g com.apple.trackpad.threeFingerVertSwipeGesture -int 0
+
+# Enable three finger drag
+# This worked on macOS Monterey along with a logout/login cycle:
+defaults write com.apple.AppleMultitouchTrackpad DragLock -bool false
+defaults write com.apple.AppleMultitouchTrackpad Dragging -bool false
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
-defaults -currentHost write -g com.apple.trackpad.threeFingerDragGesture -bool true
-defaults -currentHost write -g com.apple.trackpad.threeFingerHorizSwipeGesture -int 0
-defaults -currentHost write -g com.apple.trackpad.threeFingerVertSwipeGesture -int 0
 
 # Enable App Exposé
 # Swipe down with three/four fingers
@@ -49,8 +57,10 @@ defaults write -g com.apple.trackpad.scaling -float 2.5
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Set a blazingly fast keyboard repeat rate
+# The fatest value on GUI is 2 
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
+# The fatest value on GUI is 15 
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Disable press-and-hold for keys in favor of key repeat (e.g.,wwwwwwwwwwwwwwwwwww)
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
