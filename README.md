@@ -15,6 +15,9 @@ cd ~/.brew
 make install
 ```
 
+## Ruby
+[install fxxk ruby](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#step-2-install-chruby-and-the-latest-ruby-with-ruby-install)
+
 ## Max OS
 
 ```shell
