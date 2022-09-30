@@ -13,6 +13,9 @@ export ZSH="/Users/ohlulu/.oh-my-zsh"
 
 # export PATH="$HOME/bin/.mint:$PATH"
 
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.2
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -141,3 +144,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # terminal vim
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
+
