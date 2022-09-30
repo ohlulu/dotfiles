@@ -8,6 +8,10 @@
 	<array>
 		<string>features.websearch.google.fallback</string>
 	</array>
+	<key>showContacts</key>
+	<false/>
+	<key>showFolders</key>
+	<true/>
 	<key>showUserDefined</key>
 	<array>
 		<string>.xcworkspace</string>
