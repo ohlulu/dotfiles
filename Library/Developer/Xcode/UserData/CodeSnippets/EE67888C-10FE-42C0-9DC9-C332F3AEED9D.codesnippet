@@ -11,6 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>func make&lt;#name#&gt;Label() -&gt; UILabel {
         let label = UILabel()
+        label.text = "&lt;#Text#&gt;"
         label.font = .systemFont(ofSize: &lt;#T##CGFloat#&gt;, weight: &lt;#T##UIFont.Weight#&gt;)
         label.textColor = &lt;#UIColor#&gt;
         label.numberOfLines = &lt;#numberOfLines#&gt;
