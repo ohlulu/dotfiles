@@ -32,9 +32,7 @@
 	<key>persistForImages</key>
 	<integer>1</integer>
 	<key>snippetKeyword</key>
-	<string>qq</string>
-	<key>snippetKeywordEnabled</key>
-	<false/>
+	<string>sc</string>
 	<key>snippetMatchFields</key>
 	<integer>1</integer>
 	<key>snippetsAtTop</key>

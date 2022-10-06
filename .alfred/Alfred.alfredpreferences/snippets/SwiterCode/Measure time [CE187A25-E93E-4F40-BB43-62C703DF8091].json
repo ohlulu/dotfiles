@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "let start = CACurrentMediaTime()\nlet end = CACurrentMediaTime()\nprint(\"⌛️ \\(end - start)\")",
+    "uid" : "CE187A25-E93E-4F40-BB43-62C703DF8091",
+    "name" : "Measure time",
+    "keyword" : "``measure"
+  }
+}
