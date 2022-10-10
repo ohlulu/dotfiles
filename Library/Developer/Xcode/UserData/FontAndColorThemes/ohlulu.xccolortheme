@@ -28,8 +28,6 @@
 	<string>0.972549 0.972549 0.94902 1</string>
 	<key>DVTConsoleTextSelectionColor</key>
 	<string>0.286275 0.282353 0.243137 1</string>
-	<key>DVTDebuggerInstructionPointerColor</key>
-	<string>0.65098 0.886275 0.180392 1</string>
 	<key>DVTFontAndColorVersion</key>
 	<integer>1</integer>
 	<key>DVTLineSpacing</key>
@@ -148,6 +146,16 @@
 		<string>0.897692 0.89786 0.89765 0.894284</string>
 		<key>xcode.syntax.preprocessor</key>
 		<string>0.767754 0.19674 0 1</string>
+		<key>xcode.syntax.regex</key>
+		<string>0.701961 0.215686 0.215686 1</string>
+		<key>xcode.syntax.regex.capturename</key>
+		<string>0.408207 0.761531 0.587706 0.95</string>
+		<key>xcode.syntax.regex.charname</key>
+		<string>0.254902 0.607843 0.572549 1</string>
+		<key>xcode.syntax.regex.number</key>
+		<string>0.521569 0.74902 0.364706 1</string>
+		<key>xcode.syntax.regex.other</key>
+		<string>0.897692 0.89786 0.89765 0.894284</string>
 		<key>xcode.syntax.string</key>
 		<string>0.701961 0.215686 0.215686 1</string>
 		<key>xcode.syntax.url</key>
@@ -204,6 +212,16 @@
 		<key>xcode.syntax.plain</key>
 		<string>Inconsolata-Regular - 18.0</string>
 		<key>xcode.syntax.preprocessor</key>
+		<string>Inconsolata-Regular - 18.0</string>
+		<key>xcode.syntax.regex</key>
+		<string>Inconsolata-Regular - 18.0</string>
+		<key>xcode.syntax.regex.capturename</key>
+		<string>Inconsolata-Regular - 18.0</string>
+		<key>xcode.syntax.regex.charname</key>
+		<string>Inconsolata-Regular - 18.0</string>
+		<key>xcode.syntax.regex.number</key>
+		<string>Inconsolata-Regular - 18.0</string>
+		<key>xcode.syntax.regex.other</key>
 		<string>Inconsolata-Regular - 18.0</string>
 		<key>xcode.syntax.string</key>
 		<string>Inconsolata-Regular - 18.0</string>
