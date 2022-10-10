@@ -124,7 +124,7 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias gg='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
+
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export PATH="$HOME/.mint/bin:$PATH"
