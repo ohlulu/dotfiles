@@ -3,24 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>plv</string>
+	<string>ii - spinner</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var</string>
+	<string>func makeSpinnerView() -&gt; UIActivityIndicatorView {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        return indicator
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FF35E2D8-6898-4B50-9D9C-E7B976AAC4A6</string>
+	<string>C53389A6-E461-4B3D-98FC-954C60D2F2A8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>private lazy var</string>
+	<string>Make spinner</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
