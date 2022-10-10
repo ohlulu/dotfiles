@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>11D5721D-E45C-4D45-82C8-2CC370002271</string>
+				<string>B77556E4-81C8-4EE1-833A-29940B3719A2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B77556E4-81C8-4EE1-833A-29940B3719A2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>11D5721D-E45C-4D45-82C8-2CC370002271</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Ohlulu</string>
@@ -45,27 +58,6 @@
 	<string>Open Jira</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>sps</string>
-				<key>subtext</key>
-				<string>SPS-{query}</string>
-				<key>text</key>
-				<string>Browse</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -90,23 +82,48 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://shopline.atlassian.net/browse/POSOP-{query}</string>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>open</string>
+				<key>subtext</key>
+				<string>{query}</string>
+				<key>text</key>
+				<string>Browse</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>803F638A-90AB-4E52-B2F3-CD1479C644C5</string>
+			<string>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+echo -n $query</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B77556E4-81C8-4EE1-833A-29940B3719A2</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -129,6 +146,27 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://shopline.atlassian.net/browse/POSOP-{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>803F638A-90AB-4E52-B2F3-CD1479C644C5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -137,7 +175,7 @@
 		<key>11D5721D-E45C-4D45-82C8-2CC370002271</key>
 		<dict>
 			<key>xpos</key>
-			<real>270</real>
+			<real>455</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
@@ -155,7 +193,7 @@
 			<key>xpos</key>
 			<real>270</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>345</real>
 		</dict>
 		<key>90E0064F-28A0-4998-9113-2B2D2B46DB52</key>
 		<dict>
@@ -164,7 +202,14 @@
 			<key>xpos</key>
 			<real>50</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>345</real>
+		</dict>
+		<key>B77556E4-81C8-4EE1-833A-29940B3719A2</key>
+		<dict>
+			<key>xpos</key>
+			<real>250</real>
+			<key>ypos</key>
+			<real>50</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
