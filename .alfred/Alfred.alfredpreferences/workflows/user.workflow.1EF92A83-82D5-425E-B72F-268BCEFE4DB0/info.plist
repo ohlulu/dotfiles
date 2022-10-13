@@ -106,17 +106,22 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>127</integer>
 				<key>script</key>
-				<string>query="{query}"
-
-echo -n $query</string>
+				<string>import Foundation
+var query = CommandLine.arguments[1]
+let regex = try! NSRegularExpression(pattern: #"\d+"#)
+let results = regex.matches(
+	in: query,
+	range: NSRange(query.startIndex..., in: query))
+let matched = results.map { String(query[Range($0.range, in: query)!]) }.first ?? ""
+print(matched, terminator: "")</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>10</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -124,27 +129,6 @@ echo -n $query</string>
 			<string>B77556E4-81C8-4EE1-833A-29940B3719A2</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>po</string>
-				<key>subtext</key>
-				<string>POSOP-{query}</string>
-				<key>text</key>
-				<string>Browse</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>90E0064F-28A0-4998-9113-2B2D2B46DB52</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -164,6 +148,27 @@ echo -n $query</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>803F638A-90AB-4E52-B2F3-CD1479C644C5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>po</string>
+				<key>subtext</key>
+				<string>POSOP-{query}</string>
+				<key>text</key>
+				<string>Browse</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>90E0064F-28A0-4998-9113-2B2D2B46DB52</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -193,7 +198,7 @@ echo -n $query</string>
 			<key>xpos</key>
 			<real>270</real>
 			<key>ypos</key>
-			<real>345</real>
+			<real>205</real>
 		</dict>
 		<key>90E0064F-28A0-4998-9113-2B2D2B46DB52</key>
 		<dict>
@@ -202,7 +207,7 @@ echo -n $query</string>
 			<key>xpos</key>
 			<real>50</real>
 			<key>ypos</key>
-			<real>345</real>
+			<real>205</real>
 		</dict>
 		<key>B77556E4-81C8-4EE1-833A-29940B3719A2</key>
 		<dict>
