@@ -3,25 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ii - spinner</string>
+	<string>ii - preview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var spinner = makeSpinnerView()
-func makeSpinnerView() -&gt; UIActivityIndicatorView {
-        let indicator = UIActivityIndicatorView(style: .medium)
-        return indicator
-    }</string>
+	<string>#if canImport(SwiftUI) &amp;&amp; DEBUG
+import SwiftUI
+
+struct &lt;#some view#&gt;_Preview: PreviewProvider {
+    static var previews: some View {
+        &lt;#some view#&gt;.showPreview()
+    }
+}
+#endif
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C53389A6-E461-4B3D-98FC-954C60D2F2A8</string>
+	<string>9602AD3E-D301-44F9-ACA6-7D7BE294A481</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Make spinner</string>
+	<string>Make SwiftPreview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
