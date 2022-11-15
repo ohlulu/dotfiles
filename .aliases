@@ -1,6 +1,5 @@
 alias gg='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias ggc='gg commit -m'
-alias ls='exa'
 
 batdiff() {
     git diff --name-only --diff-filter=d | xargs bat --diff
