@@ -13,9 +13,9 @@ export ZSH="/Users/ohlulu/.oh-my-zsh"
 
 # export PATH="$HOME/bin/.mint:$PATH"
 
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.2
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.3
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
