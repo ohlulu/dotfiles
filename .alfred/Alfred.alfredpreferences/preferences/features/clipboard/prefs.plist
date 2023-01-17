@@ -4,8 +4,6 @@
 <dict>
 	<key>autoExpandMidString</key>
 	<true/>
-	<key>autoExpandSimulatedKeyEventPadding</key>
-	<real>4</real>
 	<key>autoPaste</key>
 	<false/>
 	<key>clearKeywordEnabled</key>
