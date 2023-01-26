@@ -10,6 +10,7 @@ all: install-brew congifure-macOS install-ohmyzsh ## [All] install-brew congifur
 install-brew: ## [安裝] homebrew + bundle
 	@$(SELF) log MESSAGE="Start checking for Homebrew..."
 	@if [ "$$(brew doctor)" != "Your system is ready to brew." ]; then \
+		echo "brew doesn't instaalled, start installing..."
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
 	fi
 	@$(SELF) log-success MESSAGE="brew did installed"
