@@ -15,7 +15,7 @@ install-brew: ## [安裝] homebrew + bundle
 	fi
 	@$(SELF) log-success MESSAGE="brew did installed"
 	@$(SELF) log MESSAGE="Start brew bundle installing..."
-	@brew bundle --file=~/.brew/Brewfile > /dev/null 2>&1
+	@brew bundle --file=~/.brew/Brewfile 
 	@$(SELF) log-success MESSAGE="brew bundle did installed"
 
 .PHONY: congifure-macOS
