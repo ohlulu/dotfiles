@@ -3,11 +3,11 @@
 SELF          := $(MAKE) -f $(MAKEFILE_LIST)
 BREWDELEGATOR := $(MAKE) --makefile=.brew/makefile
 
-.PHONY: all
-all: install-brew
+.PHONY: all 
+all: install-brew congifure-macOS install-ohmyzsh ## [All] install-brew congifure-macOS install-ohmyzsh
 
-.PHONY: install-brew congifure-macOS install-ohmyzsh
-install-brew: 
+.PHONY: install-brew 
+install-brew: ## [安裝] homebrew + bundle
 	@$(SELF) log MESSAGE="Start checking for Homebrew..."
 	@if [ "$$(brew doctor)" != "Your system is ready to brew." ]; then \
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
@@ -18,13 +18,18 @@ install-brew:
 	@$(SELF) log-success MESSAGE="brew bundle did installed"
 
 .PHONY: congifure-macOS
-congifure-macOS:
+congifure-macOS: ## [設定] Mac OS 環境
 	@sh ~/.macOS/install.sh
 
-.PHONY: install-ohmyzsh
+.PHONY: install-ohmyzsh ## [安裝] ohmyzsh
 install-ohmyzsh:
 	@sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+.PHONY: help h
+help h: ## [幫助] 印出所有 makefile target
+	@echo -----------------------------------------------------------------------
+	@awk 'BEGIN {FS = ":.*##"; printf "Usage: make [optinos]\033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+	@echo -----------------------------------------------------------------------
 
 ### ----------------------- Helpers ----------------------- ###
 
