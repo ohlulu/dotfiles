@@ -55,8 +55,6 @@ cask "postman", args: { appdir: "/Applications" }
 cask "reveal", args: { appdir: "/Applications" }
 # Team communication and collaboration software
 cask "slack", args: { appdir: "/Applications" }
-# Editor for localizable files
-cask "stringz", args: { appdir: "/Applications" }
 # Xcode Extension for reformatting Swift code
 cask "swiftformat-for-xcode", args: { appdir: "/Applications" }
 # Open-source code editor
