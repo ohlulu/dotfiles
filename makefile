@@ -4,22 +4,25 @@ SELF          := $(MAKE) -f $(MAKEFILE_LIST)
 BREWDELEGATOR := $(MAKE) --makefile=.brew/makefile
 
 .PHONY: all 
-all: install-brew congifure-macOS install-ohmyzsh ## [All] install-brew congifure-macOS install-ohmyzsh
+all: install-brew brew-bundle config-mac install-ohmyzsh  ## [All] install-brew brew-bundle config-mac install-ohmyzsh
 
 .PHONY: install-brew 
-install-brew: ## [安裝] homebrew + bundle
+install-brew: ## [安裝] homebrew
 	@$(SELF) log MESSAGE="Start checking for Homebrew..."
 	@if [ "$$(brew doctor)" != "Your system is ready to brew." ]; then \
 		echo "brew doesn't instaalled, start installing..."; \
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
 	fi
 	@$(SELF) log-success MESSAGE="brew did installed"
+
+.PHONY: brew-bundle
+brew-bundle: ## [安裝] brew bundle
 	@$(SELF) log MESSAGE="Start brew bundle installing..."
 	@brew bundle --file=~/.brew/Brewfile 
 	@$(SELF) log-success MESSAGE="brew bundle did installed"
 
-.PHONY: congifure-macOS
-congifure-macOS: ## [設定] Mac OS 環境
+.PHONY: config-mac
+config-mac: ## [設定] Mac OS 環境
 	@sh ~/.macOS/install.sh
 
 .PHONY: install-ohmyzsh ## [安裝] ohmyzsh
