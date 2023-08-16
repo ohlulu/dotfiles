@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>15C08EBA-194F-4BE4-B806-DACA9DE4024F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>sps</string>
+			<key>text</key>
+			<string>Search SPS-{query}</string>
+			<key>url</key>
+			<string>https://shopline.atlassian.net/browse/SPS-{query}</string>
+		</dict>
+	</dict>
+</dict>
 </plist>
