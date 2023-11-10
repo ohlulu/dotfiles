@@ -15,7 +15,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 
 source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.2
+chruby ruby-3.2
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
