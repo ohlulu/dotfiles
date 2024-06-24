@@ -2,9 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>disabledDefaultActions</key>
+	<dict>
+		<key>alfred.action.mixed.email</key>
+		<true/>
+		<key>alfred.action.mixed.emailto</key>
+		<true/>
+	</dict>
 	<key>escapeCopiedPath</key>
 	<true/>
-	<key>showWithRightArrow</key>
+	<key>finderSelectionHotkey</key>
+	<dict>
+		<key>key</key>
+		<integer>44</integer>
+		<key>mod</key>
+		<integer>1048576</integer>
+		<key>string</key>
+		<string>/</string>
+	</dict>
+	<key>showWithCtrl</key>
+	<false/>
+	<key>showWithFn</key>
 	<false/>
 </dict>
 </plist>
