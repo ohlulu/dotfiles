@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import Combine\n\nfinal class ValueSpy<T, Failure: Error> {\n    var values = [T]()\n    var errors = [Error]()\n\n    private(set) var cancellable: AnyCancellable?\n\n    init(_ publisher: AnyPublisher<T, Failure>) {\n        cancellable = publisher\n            .sink(\n                receiveCompletion: { [weak self] completion in\n                    if case let .failure(error) = completion {\n                        self?.errors.append(error)\n                    }\n                },\n                receiveValue: { [weak self] value in\n                    self?.values.append(value)\n                })\n    }\n}\n",
+    "uid" : "15A25BCD-0127-4CD0-8C28-53D52771B5B8",
+    "name" : "Combine - ValueSpy",
+    "keyword" : ""
+  }
+}

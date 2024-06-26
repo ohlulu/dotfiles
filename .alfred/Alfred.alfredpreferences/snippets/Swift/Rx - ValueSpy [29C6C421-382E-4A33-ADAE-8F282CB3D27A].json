@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import RxSwift\n\nfinal class ValueSpy<T> {\n    var values = [T]()\n    var errors = [Error]()\n\n    private var disposable: Disposable?\n\n    init(_ observable: Observable<T>) {\n        disposable = observable\n            .subscribe(\n                onNext: { [weak self] value in\n                    self?.values.append(value)\n                }, onError: { [weak self] error in\n                    self?.errors.append(error)\n                })\n    }\n}\n",
+    "uid" : "29C6C421-382E-4A33-ADAE-8F282CB3D27A",
+    "name" : "Rx - ValueSpy",
+    "keyword" : ""
+  }
+}

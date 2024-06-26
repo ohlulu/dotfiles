@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "extension UITableView {\n\tfunc sizeTableHeaderToFit() {\n\t\tguard let header = tableHeaderView else { return }\n\t\t\n\t\tlet size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)\n\t\t\n\t\tlet needsFrameUpdate = header.frame.height != size.height\n\t\tif needsFrameUpdate {\n\t\t\theader.frame.size.height = size.height\n\t\t\ttableHeaderView = header\n\t\t}\n\t}\n}",
+    "uid" : "C99696E2-039D-4263-8CA1-EEDD9C5CEA6C",
+    "name" : "UITableView.sizeTableHeaderToFit",
+    "keyword" : ""
+  }
+}

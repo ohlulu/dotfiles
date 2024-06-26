@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "\/\/ XCTestCase+TrackMemoryLeaks\n\nimport XCTest\n\nextension XCTestCase {\n    func trackMemoryLeaks(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {\n        addTeardownBlock { [weak instance] in\n            XCTAssertNil(instance, \"Instance should have been deallocated. Potential memory leak.\", file: file, line: line)\n        }\n    }\n}\n",
+    "uid" : "A7C3AD5D-5AD3-452A-98BA-7470C81F8430",
+    "name" : "XCTestCase.trackMemoryLeaks",
+    "keyword" : ""
+  }
+}
