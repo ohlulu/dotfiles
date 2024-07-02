@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "extension UIImage {\n\tstatic func make(withColor color: UIColor) -> UIImage {\n\t\tlet rect = CGRect(x: 0, y: 0, width: 1, height: 1)\n\t\tlet format = UIGraphicsImageRendererFormat()\n\t\tformat.scale = 1\n\n\t\treturn UIGraphicsImageRenderer(size: rect.size, format: format).image { rendererContext in\n\t\t\tcolor.setFill()\n\t\t\trendererContext.fill(rect)\n\t\t}\n\t}\n}",
+    "uid" : "B8537437-9236-4E23-9ADB-232B47BA4652",
+    "name" : "MakeImage with color",
+    "keyword" : ""
+  }
+}
