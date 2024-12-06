@@ -1,0 +1,66 @@
+{
+    "tabnine.experimentalAutoImports": true,
+    "[html]": {
+        "editor.defaultFormatter": "mohd-akram.vscode-html-format"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "yaml.schemas": {
+        "file:///Users/ohlulu/.vscode/extensions/atlassian.atlascode-3.0.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.jqlList": [
+        {
+            "id": "35314d1a-4cbd-43fe-8ef0-2d5ab8feba50",
+            "enabled": true,
+            "name": "My shopline Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "67b7c27d-c81f-4321-90fc-ed6c5f46dfa9",
+            "monitor": true
+        }
+    ],
+    "atlascode.bitbucket.pipelines.monitorEnabled": false,
+    "atlascode.bitbucket.pipelines.explorerEnabled": false,
+    "atlascode.bitbucket.statusbar.showProduct": true,
+    "lldb.library": "/Applications/Xcode-15.4.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "redhat.telemetry.enabled": true,
+    "atlascode.jira.enabled": true,
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 1,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "explorer.confirmDragAndDrop": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "markdown.extension.toc.levels": "3..6",
+    "projectManager.tags": [
+        "Personal",
+        "Work",
+        "Obsolete",
+        "Side Porject"
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+    "prettier.tabWidth": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 150,
+    "makefile.configureOnOpen": true,
+    "lldb.launch.expressions": "native",
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
+    "editor.semanticHighlighting.enabled": true,
+    "cursor-retrieval.canAttemptGithubLogin": false,
+    "editor.inlayHints.enabled": "offUnlessPressed"
+}
