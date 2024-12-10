@@ -136,6 +136,10 @@
 
     // ===== Sweetpad Command =====
     {
+        "key": "cmd+r",
+        "command": "sweetpad.build.run"
+    },
+    {
         "key": "cmd+b",
         "command": "sweetpad.build.build"
     },
