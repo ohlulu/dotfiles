@@ -23,11 +23,6 @@
         "command": "workbench.action.quickOpen"
     },
     {
-        "key": "cmd+h",
-        "command": "editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus"
-    },
-    {
         "key": "shift+cmd+h",
         "command": "references-view.showCallHierarchy",
         "when": "editorHasCallHierarchyProvider"
@@ -121,6 +116,11 @@
         "command": "editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
+    {
+        "key": "cmd+h",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
 
     // ===== Navigation History =====
     {
@@ -135,6 +135,10 @@
     },
 
     // ===== Sweetpad Command =====
+    {
+        "key": "cmd+b",
+        "command": "sweetpad.build.build"
+    },
     {
         "key": "cmd+u",
         "command": "sweetpad.build.test"
@@ -393,5 +397,10 @@
         "key": "alt+cmd+up",
         "command": "-editor.action.insertCursorAbove",
         "when": "editorTextFocus"
-    }
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
 ]

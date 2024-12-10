@@ -38,7 +38,8 @@
     },
     "explorer.confirmDragAndDrop": false,
     "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabWidth": 2
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -62,5 +63,7 @@
     "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
     "editor.semanticHighlighting.enabled": true,
     "cursor-retrieval.canAttemptGithubLogin": false,
-    "editor.inlayHints.enabled": "offUnlessPressed"
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "files.dialog.defaultPath": "/Users/ohlulu/Developer",
+    "git.confirmSync": false
 }
