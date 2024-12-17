@@ -38,8 +38,7 @@
     },
     "explorer.confirmDragAndDrop": false,
     "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "prettier.tabWidth": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -60,10 +59,20 @@
     "makefile.configureOnOpen": true,
     "lldb.launch.expressions": "native",
     "cmake.showOptionsMovedNotification": false,
+    "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
     "editor.semanticHighlighting.enabled": true,
     "cursor-retrieval.canAttemptGithubLogin": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "files.dialog.defaultPath": "/Users/ohlulu/Developer",
-    "git.confirmSync": false,
-    "workbench.colorTheme": "Visual Studio Dark - C++"
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command"
+    ],
+    "[swift]": {
+        "editor.defaultFormatter": "sweetpad.sweetpad"
+    },
+    "sweetpad.format.args": [
+        "${file}"
+    ],
+    "sweetpad.format.path": "swiftformat"
 }

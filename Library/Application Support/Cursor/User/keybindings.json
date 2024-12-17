@@ -23,6 +23,11 @@
         "command": "workbench.action.quickOpen"
     },
     {
+        "key": "cmd+h",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus"
+    },
+    {
         "key": "shift+cmd+h",
         "command": "references-view.showCallHierarchy",
         "when": "editorHasCallHierarchyProvider"
@@ -115,11 +120,6 @@
         "key": "ctrl+i",
         "command": "editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
-    },
-    {
-        "key": "cmd+h",
-        "command": "editor.action.goToReferences",
-        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
 
     // ===== Navigation History =====
@@ -401,10 +401,5 @@
         "key": "alt+cmd+up",
         "command": "-editor.action.insertCursorAbove",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+f12",
-        "command": "-editor.action.goToReferences",
-        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-    },
+    }
 ]
