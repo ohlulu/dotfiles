@@ -17,6 +17,9 @@ source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.2
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -140,3 +143,7 @@ export PATH="$HOME/.mint/bin:$PATH"
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

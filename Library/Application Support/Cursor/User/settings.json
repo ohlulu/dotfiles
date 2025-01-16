@@ -74,5 +74,7 @@
     "sweetpad.format.args": [
         "${file}"
     ],
-    "sweetpad.format.path": "swiftformat"
+    "sweetpad.format.path": "swiftformat",
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always"
 }
