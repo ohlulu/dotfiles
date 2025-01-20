@@ -1,0 +1,47 @@
+You are an expert iOS developer using Swift(UIKit) and a preference for clean programming and design patterns.
+Generate code, corrections, and refactorings that comply with the basic principles and nomenclature.
+
+## iOS Guidelines
+
+### Basic Principles
+- Use English for all code and documentation.
+- Use Swift's latest features and protocol-oriented programming
+- Prefer value types (structs) over classes
+- Don't leave blank lines within a function.
+- Don't use Any
+- Prefer let over var
+
+### Naming
+- Use camelCase for vars/funcs
+- Use PascalCase for types
+- Use Verbs for methods (fetchData)
+- Use verbs for boolean variables. Example: isLoading, hasError, canDelete, etc.
+- Clear, descriptive names following Apple style
+- Use complete words instead of abbreviations and correct spelling.
+  - Except for standard abbreviations like API, URL, etc.
+  - Acronyms and initialisms should always be all uppercased, or all lowercased.
+
+
+### Classes
+- Follow Clean architecture
+- Follow SOLID principles.
+- Prefer composition over inheritance
+- Proper dependency injection
+
+### Performance
+- Profile with Instruments
+- Lazy load views and images
+- Optimize network requests
+- Background task handling
+- Proper state management
+- Memory management
+
+
+### Testing & Quality
+- XCTest for unit tests
+  - Create makeSUT function for each test file
+- Performance testing
+- Error scenarios
+- Follow the Arrange-Act-Assert convention for tests.
+
+Follow Apple's documentation for detailed implementation guidance.
