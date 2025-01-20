@@ -76,5 +76,6 @@
     ],
     "sweetpad.format.path": "swiftformat",
     "git.confirmSync": false,
-    "git.openRepositoryInParentFolders": "always"
+    "git.openRepositoryInParentFolders": "always",
+    "workbench.activityBar.orientation": "vertical"
 }
