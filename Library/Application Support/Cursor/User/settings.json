@@ -77,5 +77,9 @@
     "sweetpad.format.path": "swiftformat",
     "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "always",
-    "workbench.activityBar.orientation": "vertical"
+    "workbench.activityBar.orientation": "vertical",
+    "cursor.cmdk.autoSelect": false,
+    "files.exclude": {
+        "**/__pycache__": true
+    }
 }
