@@ -150,3 +150,5 @@ export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+[[ -s "/Users/ohlulu/.gvm/scripts/gvm" ]] && source "/Users/ohlulu/.gvm/scripts/gvm"
