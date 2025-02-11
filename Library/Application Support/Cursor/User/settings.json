@@ -81,5 +81,7 @@
     "cursor.cmdk.autoSelect": false,
     "files.exclude": {
         "**/__pycache__": true
-    }
+    },
+    "python.createEnvironment.trigger": "off",
+    "files.autoSave": "afterDelay"
 }
