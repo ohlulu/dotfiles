@@ -152,3 +152,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 
 [[ -s "/Users/ohlulu/.gvm/scripts/gvm" ]] && source "/Users/ohlulu/.gvm/scripts/gvm"
+
+# Flutter
+export PATH="$PATH:$HOME/flutter/bin"
