@@ -83,5 +83,6 @@
         "**/__pycache__": true
     },
     "python.createEnvironment.trigger": "off",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "dart.flutterSdkPath": "~/flutter"
 }
