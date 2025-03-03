@@ -155,3 +155,6 @@ eval "$(pyenv init - zsh)"
 
 # Flutter
 export PATH="$PATH:$HOME/flutter/bin"
+
+# golang
+export PATH="$PATH:$(go env GOPATH)/bin"
