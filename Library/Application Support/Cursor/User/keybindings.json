@@ -35,22 +35,25 @@
   {
     "key": "ctrl+cmd+left",
     "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup",
-    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+cmd+right",
     "command": "workbench.action.openNextRecentlyUsedEditorInGroup",
-    "when": "editorTextFocus"
   },
   // ===== Editor View Control =====
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
   {
     "key": "cmd+1",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
-    "key": "cmd+0",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "key": "cmd+4",
+    "command": "workbench.action.findInFiles",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
     "key": "alt+cmd+0",
