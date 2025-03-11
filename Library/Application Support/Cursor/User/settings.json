@@ -88,7 +88,7 @@
   "files.autoSave": "afterDelay",
   "dart.flutterSdkPath": "~/flutter",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.colorTheme": "Cursor Dark Midnight",
   "indentRainbow.colors": [
     "rgba(255,255,64,0.3)",
     "rgba(127,255,127,0.3)",
