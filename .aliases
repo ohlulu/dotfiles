@@ -4,3 +4,12 @@ alias ggc='gg commit -m'
 batdiff() {
     git diff --name-only --diff-filter=d | xargs bat --diff
 }
+
+ggsync() {
+    gg pull
+    gg status | grep "modified" | awk '{$1=""; print $0}' | sed 's/^[ \t]*//' | while read -r file; do
+        gg add -f "$file"
+    done
+    gg commit -m "sync"
+    gg push
+}

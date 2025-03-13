@@ -104,5 +104,12 @@
     // "editor.lineHighlightBackground": "#57595eB4",
     // "editor.lineHighlightBorder": "#3a3a3a"
   },
-  "workbench.colorTheme": "Oh Theme"
+  "workbench.colorTheme": "Oh Theme",
+  "editor.minimap.enabled": true,
+  "update.releaseTrack": "prerelease",
+  "cursor.composer.agentLoopOnLints": false,
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  }
 }
