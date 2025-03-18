@@ -139,11 +139,14 @@
   },
   {
     "key": "cmd+b",
-    "command": "sweetpad.build.build"
+    "command": "sweetpad.build.build",
+    "when": "sweetpad.build.isBuildable"
   },
   {
     "key": "cmd+u",
-    "command": "sweetpad.build.test"
+    "command": "sweetpad.build.test",
+    "when": "editorLangId === swift"
+
   },
   {
     "key": "ctrl+0",

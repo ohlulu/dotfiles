@@ -104,5 +104,7 @@
     // "editor.lineHighlightBackground": "#57595eB4",
     // "editor.lineHighlightBorder": "#3a3a3a"
   },
-  "workbench.colorTheme": "Oh Theme"
+  "workbench.colorTheme": "Xcode Classic (Dark)",
+  "update.releaseTrack": "prerelease",
+  "projectManager.sortList": "Path",
 }
