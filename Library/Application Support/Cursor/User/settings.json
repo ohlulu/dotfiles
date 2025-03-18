@@ -1,11 +1,12 @@
 {
   // General IDE settings
+  "files.dialog.defaultPath": "/Users/ohlulu/Developer",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.semanticHighlighting.enabled": true,
   "editor.minimap.enabled": true,
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Oh Theme",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
   "update.releaseTrack": "prerelease",
@@ -54,6 +55,7 @@
     "editor.detectIndentation": false
   },
   // JavaScript
+  "eslint.format.enable": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -132,5 +134,5 @@
   "makefile.configureOnOpen": true,
   "cmake.showOptionsMovedNotification": false,
   // 其他設定
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
 }

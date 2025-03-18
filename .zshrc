@@ -7,15 +7,13 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
 
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
 
 # export PATH="$HOME/bin/.mint:$PATH"
-
-source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.2
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -158,3 +156,5 @@ export PATH="$PATH:$HOME/flutter/bin"
 
 # golang
 export PATH="$PATH:$(go env GOPATH)/bin"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
