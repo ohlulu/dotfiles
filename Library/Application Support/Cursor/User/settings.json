@@ -1,16 +1,52 @@
 {
-  "tabnine.experimentalAutoImports": true,
+  // General IDE settings
+  "files.dialog.defaultPath": "/Users/ohlulu/Developer",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.minimap.enabled": true,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.orientation": "vertical",
+  "update.releaseTrack": "prerelease",
+  // File related settings
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  // Git related settings
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "always",
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "stash-push:command",
+    "switch:command"
+  ],
+  // --------Language specific settings--------
+  // HTML
   "[html]": {
     "editor.defaultFormatter": "mohd-akram.vscode-html-format"
   },
+  // JSON
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  // JSONC
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  // Markdown
+  "markdown.extension.toc.levels": "3..6",
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  // YAML
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "yaml.schemas": {
     "file:///Users/ohlulu/.vscode/extensions/atlassian.atlascode-3.0.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
@@ -18,6 +54,59 @@
     "editor.insertSpaces": true,
     "editor.detectIndentation": false
   },
+  // JavaScript
+  "eslint.format.enable": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+  // Python
+  "python.createEnvironment.trigger": "off",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  // Swift
+  "sweetpad.format.args": [
+    "${file}"
+  ],
+  "[swift]": {
+    "editor.defaultFormatter": "sweetpad.sweetpad"
+  },
+  // SQL
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+  // Go
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  // Dart
+  "dart.flutterSdkPath": "~/flutter",
+  // Prettier
+  "prettier.tabWidth": 4,
+  "prettier.printWidth": 150,
+  // Markdown
+  // IndentRainbow
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"
+  ],
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  "indentRainbow.errorColor": "",
+  // 外掛設定 - Cursor
+  "cursor.cmdk.autoSelect": false,
+  "cursor.composer.agentLoopOnLints": false,
+  "cursor.cpp.enablePartialAccepts": true,
+  "cursor-retrieval.canAttemptGithubLogin": false,
+  // 外掛設定 - Tabnine
+  "tabnine.experimentalAutoImports": true,
+  // 外掛設定 - Atlasscode
+  "atlascode.jira.enabled": true,
   "atlascode.jira.jqlList": [
     {
       "id": "35314d1a-4cbd-43fe-8ef0-2d5ab8feba50",
@@ -31,80 +120,19 @@
   "atlascode.bitbucket.pipelines.monitorEnabled": false,
   "atlascode.bitbucket.pipelines.explorerEnabled": false,
   "atlascode.bitbucket.statusbar.showProduct": true,
-  "lldb.library": "/Applications/Xcode-15.4.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-  "redhat.telemetry.enabled": true,
-  "atlascode.jira.enabled": true,
-  "explorer.confirmDelete": false,
-  "window.zoomLevel": 1,
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "explorer.confirmDragAndDrop": false,
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.formatOnSave": true
-  },
-  "markdown.extension.toc.levels": "3..6",
+  // ProjectManager
   "projectManager.tags": [
     "Personal",
     "Work",
     "Obsolete",
     "Side Porject"
   ],
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "security.workspace.trust.untrustedFiles": "open",
-  "prettier.tabWidth": 4,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.printWidth": 150,
-  "makefile.configureOnOpen": true,
-  "lldb.launch.expressions": "native",
-  "cmake.showOptionsMovedNotification": false,
-  "editor.semanticHighlighting.enabled": true,
-  "cursor-retrieval.canAttemptGithubLogin": false,
-  "editor.inlayHints.enabled": "offUnlessPressed",
-  "gitlens.gitCommands.skipConfirmations": [
-    "fetch:command",
-    "stash-push:command",
-    "switch:command"
-  ],
-  "[swift]": {
-    "editor.defaultFormatter": "sweetpad.sweetpad"
-  },
-  "sweetpad.format.args": [
-    "${file}"
-  ],
   "sweetpad.format.path": "swiftformat",
-  "git.confirmSync": false,
-  "git.openRepositoryInParentFolders": "always",
-  "workbench.activityBar.orientation": "vertical",
-  "cursor.cmdk.autoSelect": false,
-  "files.exclude": {
-    "**/__pycache__": true
-  },
-  "python.createEnvironment.trigger": "off",
-  "files.autoSave": "afterDelay",
-  "dart.flutterSdkPath": "~/flutter",
-  "workbench.iconTheme": "material-icon-theme",
-  "indentRainbow.colors": [
-    "rgba(255,255,64,0.3)",
-    "rgba(127,255,127,0.3)",
-    "rgba(255,127,255,0.3)",
-    "rgba(79,236,236,0.3)"
-  ],
-  "indentRainbow.indicatorStyle": "light",
-  "indentRainbow.lightIndicatorStyleLineWidth": 1,
-  "[sql]": {
-    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
-  },
-  "indentRainbow.errorColor": "",
-  "workbench.colorCustomizations": {
-    // "editor.lineHighlightBackground": "#57595eB4",
-    // "editor.lineHighlightBorder": "#3a3a3a"
-  },
-  "workbench.colorTheme": "Xcode Classic (Dark)",
-  "update.releaseTrack": "prerelease",
-  "projectManager.sortList": "Path",
+  // 開發工具設定
+  "lldb.library": "/Applications/Xcode-15.4.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "lldb.launch.expressions": "native",
+  "makefile.configureOnOpen": true,
+  "cmake.showOptionsMovedNotification": false,
+  // 其他設定
+  "redhat.telemetry.enabled": true,
 }
