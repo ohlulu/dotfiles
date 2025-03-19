@@ -87,6 +87,9 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
+  // Ruby
+  "solargraph.commandPath": "/Users/ohlulu/.rbenv/shims/solargraph",
+  "solargraph.useBundler": false,
   // Dart
   "dart.flutterSdkPath": "~/flutter",
   // Prettier
