@@ -5,11 +5,16 @@
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.semanticHighlighting.enabled": true,
   "editor.minimap.enabled": true,
+  "editor.fontSize": 16,
+  "editor.lineHeight": 20,
+  "editor.fontFamily": "Inconsolata-Regular",
+  "terminal.integrated.fontFamily": "monospace",
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
   "update.releaseTrack": "prerelease",
+  "window.newWindowDimensions": "inherit",
   // File related settings
   "files.autoSave": "afterDelay",
   "files.exclude": {
@@ -103,23 +108,6 @@
   "cursor.composer.agentLoopOnLints": false,
   "cursor.cpp.enablePartialAccepts": true,
   "cursor-retrieval.canAttemptGithubLogin": false,
-  // 外掛設定 - Tabnine
-  "tabnine.experimentalAutoImports": true,
-  // 外掛設定 - Atlasscode
-  "atlascode.jira.enabled": true,
-  "atlascode.jira.jqlList": [
-    {
-      "id": "35314d1a-4cbd-43fe-8ef0-2d5ab8feba50",
-      "enabled": true,
-      "name": "My shopline Issues",
-      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
-      "siteId": "67b7c27d-c81f-4321-90fc-ed6c5f46dfa9",
-      "monitor": true
-    }
-  ],
-  "atlascode.bitbucket.pipelines.monitorEnabled": false,
-  "atlascode.bitbucket.pipelines.explorerEnabled": false,
-  "atlascode.bitbucket.statusbar.showProduct": true,
   // ProjectManager
   "projectManager.tags": [
     "Personal",
@@ -135,4 +123,8 @@
   "cmake.showOptionsMovedNotification": false,
   // 其他設定
   "redhat.telemetry.enabled": true,
+  "cursor.cpp.disabledLanguages": [
+    "markdown"
+  ],
+  "cursor.terminal.usePreviewBox": true,
 }
