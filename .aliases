@@ -17,5 +17,41 @@ ggsync() {
 }
 
 workout() {
-    ggsync
+    # ggsync
+    paths=(
+        ~/Developer/SHOPLINE/api.shoplineapp.com,
+    )
+    
+    for path in "${paths[@]}"; do
+        # Remove trailing comma if present
+        path=${path%,}
+        
+        if [ -d "$path" ]; then
+            echo "Checking $path"
+            cd "$path"
+            
+            # Check for uncommitted changes
+            if [[ -n $(git status --porcelain) ]]; then
+                echo "⚠️  Uncommitted changes in $path"
+                git status -s
+            fi
+            
+            # Check for unpushed commits
+            local_branch=$(git rev-parse --abbrev-ref HEAD)
+            remote_branch=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
+            
+            if [ $? -ne 0 ]; then
+                echo "⚠️  Branch $local_branch in $path has no upstream branch"
+            else
+                ahead=$(git rev-list --count @{u}..HEAD)
+                if [ $ahead -gt 0 ]; then
+                    echo "⚠️  Branch $local_branch in $path is ahead of $remote_branch by $ahead commit(s)"
+                fi
+            fi
+            
+            echo ""
+        else
+            echo "⚠️  Path not found: $path"
+        fi
+    done
 }
