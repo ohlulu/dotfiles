@@ -15,3 +15,11 @@ ggsync() {
     gg commit -m "sync"
     gg push
 }
+
+workout() {
+    ggsync
+    
+    cd ~/Developer/ohlu/playground
+    git pull
+    make
+}
