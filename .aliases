@@ -32,10 +32,10 @@ sync_playground() {
 
 workout() {
     echo "≫ Sync dotfiles..."
-    ggsync | sed 's/^/\t/'
+    ggsync 2>&1 | sed 's/^/\t/'
 
     echo "≫ Sync playground..."
-    sync_playground | sed 's/^/\t/'
+    sync_playground 2>&1 | sed 's/^/\t/'
 
     echo "✅ Sync done"
 }
