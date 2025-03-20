@@ -37,5 +37,5 @@ workout() {
     echo "≫ Sync playground..."
     sync_playground 2>&1 | sed 's/^/    /'
 
-    echo "✔️ Sync done"
+    echo "✓ Sync done"
 }
