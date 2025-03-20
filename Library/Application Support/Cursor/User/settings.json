@@ -8,13 +8,13 @@
   "editor.fontSize": 13,
   "editor.lineHeight": 20,
   "editor.fontFamily": "SF Mono",
+  "editor.formatOnSave": true,
   "terminal.integrated.fontFamily": "monospace",
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
   "update.releaseTrack": "prerelease",
   "window.newWindowDimensions": "inherit",
-  // File related settings
   "files.autoSave": "afterDelay",
   "files.exclude": {
     "**/__pycache__": true
