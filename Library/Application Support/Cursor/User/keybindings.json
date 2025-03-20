@@ -135,17 +135,18 @@
   // ===== Sweetpad Command =====
   {
     "key": "cmd+r",
-    "command": "sweetpad.build.run"
+    "command": "sweetpad.build.run",
+    "when": "editorLangId === swift || editorLangId === objc"
   },
   {
     "key": "cmd+b",
     "command": "sweetpad.build.build",
-    "when": "sweetpad.build.isBuildable"
+    "when": "editorLangId === swift || editorLangId === objc"
   },
   {
     "key": "cmd+u",
     "command": "sweetpad.build.test",
-    "when": "editorLangId === swift"
+    "when": "editorLangId === swift || editorLangId === objc"
 
   },
   {

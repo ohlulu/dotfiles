@@ -5,11 +5,10 @@
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.semanticHighlighting.enabled": true,
   "editor.minimap.enabled": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 13,
   "editor.lineHeight": 20,
-  "editor.fontFamily": "Inconsolata-Regular",
+  "editor.fontFamily": "SF Mono",
   "terminal.integrated.fontFamily": "monospace",
-  "window.zoomLevel": 1,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
@@ -90,6 +89,7 @@
   // Ruby
   "solargraph.commandPath": "/Users/ohlulu/.rbenv/shims/solargraph",
   "solargraph.useBundler": false,
+  "ruby.rubocop.onSave": true,
   // Dart
   "dart.flutterSdkPath": "~/flutter",
   // Prettier
