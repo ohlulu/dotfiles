@@ -12,20 +12,30 @@ ggsync() {
     gg status | grep "modified" | awk '{$1=""; print $0}' | sed 's/^[ \t]*//' | while read -r file; do
         gg add -f "$file"
     done
-    if [ -n "$(git status -s)" ]; then
-    gg commit -m "sync"
+    if [ -n "$(gg status -s)" ]; then
+        echo
+        gg commit -m "sync"
         gg push
     fi
 }
 
-workout() {
-    echo "Sync dotfiles..."
-    ggsync
-    echo "--------------------------------"
-    echo "Sync playground..."
+sync_playground() {
     cd ~/Developer/ohlulu/playground
     git pull
-    make
-    echo "--------------------------------"
+    git add .
+    if [ -n "$(git status -s)" ]; then
+        echo
+        git commit -m "sync"
+        git push
+    fi
+}
+
+workout() {
+    echo "≫ Sync dotfiles..."
+    ggsync | sed 's/^/\t/'
+
+    echo "≫ Sync playground..."
+    sync_playground | sed 's/^/\t/'
+
     echo "✅ Sync done"
 }
