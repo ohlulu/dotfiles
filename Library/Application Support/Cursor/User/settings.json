@@ -120,7 +120,7 @@
   ],
   "sweetpad.format.path": "swiftformat",
   // 開發工具設定
-  "lldb.library": "/Applications/Xcode-15.4.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "lldb.library": "/Applications/Xcode-16.2.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "lldb.launch.expressions": "native",
   "makefile.configureOnOpen": true,
   "cmake.showOptionsMovedNotification": false,
