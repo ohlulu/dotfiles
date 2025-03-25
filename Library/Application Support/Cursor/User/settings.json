@@ -127,7 +127,7 @@
   // 其他設定
   "redhat.telemetry.enabled": true,
   "cursor.cpp.disabledLanguages": [
-    "markdown"
+    "go"
   ],
   "cursor.terminal.usePreviewBox": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
