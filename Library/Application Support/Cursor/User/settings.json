@@ -130,4 +130,5 @@
     "markdown"
   ],
   "cursor.terminal.usePreviewBox": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
 }
