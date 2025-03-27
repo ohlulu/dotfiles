@@ -126,9 +126,8 @@
   "cmake.showOptionsMovedNotification": false,
   // 其他設定
   "redhat.telemetry.enabled": true,
-  "cursor.cpp.disabledLanguages": [
-    "go"
-  ],
+  "cursor.cpp.disabledLanguages": [],
   "cursor.terminal.usePreviewBox": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "git.replaceTagsWhenPull": true,
 }
