@@ -111,12 +111,10 @@
   "cursor.composer.agentLoopOnLints": false,
   "cursor.cpp.enablePartialAccepts": true,
   "cursor-retrieval.canAttemptGithubLogin": false,
-  // ProjectManager
-  "projectManager.tags": [
-    "Personal",
-    "Work",
-    "Obsolete",
-    "Side Porject"
+  // git repot manager
+  "gitProjectManager.baseProjectsFolders": [
+    "~/Developer/",
+    "~/.dotfiles"
   ],
   "sweetpad.format.path": "swiftformat",
   // 開發工具設定
@@ -130,4 +128,6 @@
   "cursor.terminal.usePreviewBox": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "git.replaceTagsWhenPull": true,
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
 }
