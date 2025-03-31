@@ -51,9 +51,23 @@
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
+    "key": "cmd+2",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.view.debug"
+  },
+  {
     "key": "cmd+4",
     "command": "workbench.action.findInFiles",
     "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
   },
   {
     "key": "alt+cmd+0",
@@ -62,16 +76,6 @@
   {
     "key": "shift+cmd+y",
     "command": "workbench.action.togglePanel"
-  },
-  {
-    "key": "cmd+2",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active"
-  },
-  {
-    "key": "cmd+5",
-    "command": "workbench.actions.view.problems",
-    "when": "workbench.panel.markers.view.active"
   },
   // ===== Editor Operations =====
   {
@@ -131,6 +135,26 @@
     "key": "ctrl+i",
     "command": "editor.action.formatDocument.none",
     "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "cmd+.",
+    "command": "workbench.action.debug.stop",
+    "when": "inDebugMode && !focusedSessionIsAttach"
+  },
+  {
+    "key": "shift+f5",
+    "command": "-workbench.action.debug.stop",
+    "when": "inDebugMode && !focusedSessionIsAttach"
   },
   // ===== Sweetpad Command =====
   {
@@ -433,5 +457,5 @@
   {
     "key": "cmd+i",
     "command": "composerMode.agent"
-  }
+  },
 ]

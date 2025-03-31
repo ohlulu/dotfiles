@@ -1,20 +1,19 @@
 {
-  "mcpServers": {
-    "desktop-commander": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@smithery/cli@latest",
-        "run",
-        "@wonderwhy-er/desktop-commander"
-      ]
-    },
-    "sequential-thinking": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
+    "mcpServers": {
+        "desktop-commander": {
+            "command": "npx",
+            "args": ["-y", "@smithery/cli@latest", "run", "@wonderwhy-er/desktop-commander"]
+        },
+        "sequential-thinking": {
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+        },
+        "brave-search": {
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+            "env": {
+                "BRAVE_API_KEY": "BSAnngsfHnlEawFOVQ534ydIBKoMUu3"
+            }
+        }
     }
-  }
 }
