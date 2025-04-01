@@ -22,6 +22,9 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#57595e94"
+  },
   // Git related settings
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "always",
@@ -44,6 +47,8 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   // Markdown
+  "markdown-preview-enhanced.previewTheme": "vue.css",
+  "markdown-preview-enhanced.codeBlockTheme": "vue.css",
   "markdown.extension.toc.levels": "3..6",
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
@@ -95,7 +100,6 @@
   // Prettier
   "prettier.tabWidth": 4,
   "prettier.printWidth": 150,
-  // Markdown
   // IndentRainbow
   "indentRainbow.colors": [
     "rgba(255,255,64,0.3)",
@@ -127,6 +131,4 @@
   "cursor.terminal.usePreviewBox": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "git.replaceTagsWhenPull": true,
-  "markdown-preview-enhanced.previewTheme": "vue.css",
-  "markdown-preview-enhanced.codeBlockTheme": "vue.css",
 }
