@@ -40,7 +40,9 @@
   },
   // JSON
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 10000,
+    "editor.tabSize": 2,
   },
   // JSONC
   "[jsonc]": {
