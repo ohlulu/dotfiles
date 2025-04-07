@@ -19,23 +19,43 @@ ggsync() {
     fi
 }
 
-sync_playground() {
-    cd ~/Developer/ohlulu/playground
+sync_repos() {
+    local repo_path=$1
+    if [ -z "$repo_path" ] || [ ! -d "$repo_path" ]; then
+        echo "Error: Repository path not provided or invalid: $repo_path" >&2
+        return 1
+    fi
+
+    echo "Syncing $(basename "$repo_path")..."
+    cd "$repo_path" || return 1
     git pull
     git add .
     if [ -n "$(git status -s)" ]; then
-        echo
+        echo "  Committing changes..."
         git commit -m "sync"
+        echo "  Pushing changes..."
         git push
+    else
+        echo "  No changes to commit."
     fi
+    cd - > /dev/null # Go back to previous directory silently
 }
 
 workout() {
     echo "≫ Sync dotfiles..."
     ggsync 2>&1 | sed 's/^/    /'
 
-    echo "≫ Sync playground..."
-    sync_playground 2>&1 | sed 's/^/    /'
+    # Define the list of repositories to sync
+    local repos_to_sync=(
+        ~/Developer/ohlulu/scripts
+        ~/Developer/ohlulu/playground
+        # Add more repo paths here in the future
+    )
+
+    echo "≫ Syncing repositories..."
+    for repo_path in "${repos_to_sync[@]}"; do
+        sync_repos "$repo_path" 2>&1 | sed 's/^/    /'
+    done
 
     echo "✓ Sync done"
 }
