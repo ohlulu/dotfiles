@@ -14,6 +14,10 @@
             "env": {
                 "BRAVE_API_KEY": "BSAnngsfHnlEawFOVQ534ydIBKoMUu3"
             }
+        },
+        "playwright": {
+            "command": "npx",
+            "args": ["@playwright/mcp@latest", "--headless"]
         }
     }
 }

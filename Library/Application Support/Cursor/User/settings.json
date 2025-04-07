@@ -10,7 +10,6 @@
   "editor.fontFamily": "SF Mono",
   "editor.formatOnSave": true,
   "terminal.integrated.fontFamily": "monospace",
-  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
   "update.releaseTrack": "prerelease",
@@ -22,6 +21,11 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorTheme": "One Dark Pro",
+  "oneDarkPro.color": {
+    "green": "#e06c75",
+    "coral": "#98c379"
+  },
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#57595e94"
   },
