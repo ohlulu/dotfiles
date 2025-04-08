@@ -43,7 +43,8 @@ sync_repos() {
 
 workout() {
     echo "≫ Sync dotfiles..."
-    ggsync 2>&1 | sed 's/^/    /'
+    # Run ggsync in background and prefix output
+    (ggsync 2>&1 | sed 's/^/    [ggsync] /') &
 
     # Define the list of repositories to sync
     local repos_to_sync=(
@@ -54,8 +55,12 @@ workout() {
 
     echo "≫ Syncing repositories..."
     for repo_path in "${repos_to_sync[@]}"; do
-        sync_repos "$repo_path" 2>&1 | sed 's/^/    /'
+        # Run sync_repos in background and prefix output with repo name
+        (sync_repos "$repo_path" 2>&1 | sed "s/^/    [$(basename "$repo_path")] /") &
     done
+
+    # Wait for all background jobs to finish
+    wait
 
     echo "✓ Sync done"
 }
