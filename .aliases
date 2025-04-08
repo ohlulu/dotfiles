@@ -51,8 +51,8 @@ sync_repos() {
 
 workout() {
     echo -e "${COLOR_BLUE}≫ Sync dotfiles...${COLOR_RESET}"
-    # Run ggsync in background and prefix output with color
-    (ggsync 2>&1 | sed "s/^/    ${COLOR_YELLOW} [ggsync] ${COLOR_RESET} /") &
+    # Run ggsync in background and prefix output with color using while read
+    (ggsync 2>&1 | while IFS= read -r line; do echo -e "    ${COLOR_YELLOW}[ggsync]${COLOR_RESET} $line"; done) &
 
     # Define the list of repositories to sync
     local repos_to_sync=(
@@ -68,8 +68,8 @@ workout() {
         local color_index=$(( i % ${#colors[@]} ))
         local repo_name=$(basename "$repo_path")
         local color=${colors[$color_index]}
-        # Run sync_repos in background and prefix output with repo name and color
-        (sync_repos "$repo_path" 2>&1 | sed "s/^/    ${color} [$repo_name]${COLOR_RESET} /") &
+        # Run sync_repos in background and prefix output with repo name and color using while read
+        (sync_repos "$repo_path" 2>&1 | while IFS= read -r line; do echo -e "    ${color}[$repo_name]${COLOR_RESET} $line"; done) &
         ((i++))
     done
 
