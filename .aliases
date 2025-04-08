@@ -1,5 +1,13 @@
 #!/usr/bin/env zsh
 
+# Colors
+COLOR_RESET="\033[0m"
+COLOR_BLUE="\033[0;34m"
+COLOR_GREEN="\033[0;32m"
+COLOR_YELLOW="\033[0;33m"
+COLOR_CYAN="\033[0;36m"
+COLOR_MAGENTA="\033[0;35m"
+
 alias gg='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias ggc='gg commit -m'
 
@@ -42,9 +50,9 @@ sync_repos() {
 }
 
 workout() {
-    echo "≫ Sync dotfiles..."
-    # Run ggsync in background and prefix output
-    (ggsync 2>&1 | sed 's/^/    [ggsync] /') &
+    echo -e "${COLOR_BLUE}≫ Sync dotfiles...${COLOR_RESET}"
+    # Run ggsync in background and prefix output with color
+    (ggsync 2>&1 | sed "s/^/    ${COLOR_YELLOW}[ggsync]${COLOR_RESET} /") &
 
     # Define the list of repositories to sync
     local repos_to_sync=(
@@ -53,14 +61,20 @@ workout() {
         # Add more repo paths here in the future
     )
 
-    echo "≫ Syncing repositories..."
+    echo -e "${COLOR_BLUE}≫ Syncing repositories...${COLOR_RESET}"
+    local i=0
+    local colors=($COLOR_CYAN $COLOR_MAGENTA) # Cycle through these colors for repos
     for repo_path in "${repos_to_sync[@]}"; do
-        # Run sync_repos in background and prefix output with repo name
-        (sync_repos "$repo_path" 2>&1 | sed "s/^/    [$(basename "$repo_path")] /") &
+        local color_index=$(( i % ${#colors[@]} ))
+        local repo_name=$(basename "$repo_path")
+        local color=${colors[$color_index]}
+        # Run sync_repos in background and prefix output with repo name and color
+        (sync_repos "$repo_path" 2>&1 | sed "s/^/    ${color}[$repo_name]${COLOR_RESET} /") &
+        ((i++))
     done
 
     # Wait for all background jobs to finish
     wait
 
-    echo "✓ Sync done"
+    echo -e "${COLOR_GREEN}✓ Sync done${COLOR_RESET}"
 }
