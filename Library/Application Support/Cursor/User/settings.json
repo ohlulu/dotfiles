@@ -5,9 +5,9 @@
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.semanticHighlighting.enabled": true,
   "editor.minimap.enabled": true,
-  "editor.fontSize": 13,
-  "editor.lineHeight": 20,
-  "editor.fontFamily": "SF Mono",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 23,
+  "editor.fontFamily": "SF Mono Regular",
   "editor.formatOnSave": true,
   "terminal.integrated.fontFamily": "monospace",
   "workbench.iconTheme": "material-icon-theme",
@@ -23,8 +23,19 @@
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorTheme": "One Dark Pro",
   "oneDarkPro.color": {
-    "green": "#e06c75",
-    "coral": "#98c379"
+    "chalky": "#c4b28a",
+    "coral": "#87a987",
+    "dark": "#5c6370",
+    "deepRed": "#BE5046",
+    "error": "#FF5D62",
+    "fountainBlue": "#4d699b",
+    "green": "#c4746e",
+    "invalid": "#c5c9c5",
+    "lightDark": "#7f848e",
+    "lightWhite": "#abb2bf",
+    "malibu": "#7E9CD8",
+    "purple": "#c678dd",
+    "whiskey": "#d19a66"
   },
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#57595e94"

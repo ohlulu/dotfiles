@@ -57,15 +57,15 @@
 	<key>DVTMarkupTextOtherHeadingColor</key>
 	<string>0.976471 0.972549 0.960784 0.5</string>
 	<key>DVTMarkupTextOtherHeadingFont</key>
-	<string>.SFNS-Regular - 20.0</string>
+	<string>.SFNS-Regular - 19.6</string>
 	<key>DVTMarkupTextPrimaryHeadingColor</key>
 	<string>0.976471 0.972549 0.960784 1</string>
 	<key>DVTMarkupTextPrimaryHeadingFont</key>
-	<string>.SFNS-Regular - 35.0</string>
+	<string>.SFNS-Regular - 33.6</string>
 	<key>DVTMarkupTextSecondaryHeadingColor</key>
 	<string>0.976471 0.972549 0.960784 1</string>
 	<key>DVTMarkupTextSecondaryHeadingFont</key>
-	<string>.SFNS-Regular - 26.0</string>
+	<string>.SFNS-Regular - 25.2</string>
 	<key>DVTMarkupTextStrongColor</key>
 	<string>0.976471 0.972549 0.960784 1</string>
 	<key>DVTMarkupTextStrongFont</key>
@@ -166,69 +166,69 @@
 	<key>DVTSourceTextSyntaxFonts</key>
 	<dict>
 		<key>xcode.syntax.attribute</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.character</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.comment</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.comment.doc</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.declaration.other</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.declaration.type</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.class</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.class.system</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.constant</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.constant.system</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.function</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.function.system</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.macro</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.macro.system</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.type</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.type.system</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.variable</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.identifier.variable.system</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.keyword</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.mark</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.markup.code</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.number</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.plain</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.preprocessor</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.regex</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.regex.capturename</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.regex.charname</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.regex.number</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.regex.other</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.string</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 		<key>xcode.syntax.url</key>
-		<string>SFMono-Regular - 15.0</string>
+		<string>InconsolataForPowerline - 18.0</string>
 	</dict>
 </dict>
 </plist>
