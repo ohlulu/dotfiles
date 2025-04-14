@@ -131,7 +131,6 @@
   // 外掛設定 - Cursor
   "cursor.cmdk.autoSelect": false,
   "cursor.composer.agentLoopOnLints": false,
-  "cursor.cpp.enablePartialAccepts": true,
   "cursor-retrieval.canAttemptGithubLogin": false,
   // git repot manager
   "gitProjectManager.baseProjectsFolders": [
@@ -148,4 +147,5 @@
   "cursor.terminal.usePreviewBox": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "git.replaceTagsWhenPull": true,
+  "git.suggestSmartCommit": false,
 }
