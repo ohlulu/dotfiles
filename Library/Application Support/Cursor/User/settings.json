@@ -122,7 +122,6 @@
   ],
   "indentRainbow.indicatorStyle": "light",
   "indentRainbow.lightIndicatorStyleLineWidth": 1,
-  "indentRainbow.errorColor": "",
   // 外掛設定 - Cursor
   "cursor.cmdk.autoSelect": false,
   "cursor.composer.agentLoopOnLints": false,
@@ -143,4 +142,5 @@
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "git.replaceTagsWhenPull": true,
   "git.suggestSmartCommit": false,
+  "indentRainbow.errorColor": "",
 }
