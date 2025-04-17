@@ -9,6 +9,8 @@
   "editor.lineHeight": 23,
   "editor.fontFamily": "SF Mono Regular",
   "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "terminal.integrated.fontFamily": "monospace",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
@@ -56,9 +58,7 @@
   // JSON
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
     "prettier.tabWidth": 2,
-    "editor.insertSpaces": true,
   },
   // JSONC
   "[jsonc]": {
@@ -77,17 +77,12 @@
   },
   "yaml.schemas": {
     "file:///Users/ohlulu/.vscode/extensions/atlassian.atlascode-3.0.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
     "editor.detectIndentation": false
   },
   // JavaScript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
     "prettier.tabWidth": 2
   },
   // Python
@@ -116,7 +111,7 @@
   // Dart
   "dart.flutterSdkPath": "~/flutter",
   // Prettier
-  "prettier.tabWidth": 4,
+  "prettier.tabWidth": 2,
   "prettier.printWidth": 150,
   // IndentRainbow
   "indentRainbow.colors": [
