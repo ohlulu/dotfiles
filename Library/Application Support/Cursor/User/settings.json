@@ -143,4 +143,6 @@
   "git.replaceTagsWhenPull": true,
   "git.suggestSmartCommit": false,
   "indentRainbow.errorColor": "",
+  "gitlens.ai.model": "gitkraken",
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
 }

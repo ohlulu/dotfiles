@@ -10,6 +10,7 @@ COLOR_MAGENTA="\033[0;35m"
 
 alias gg='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias ggc='gg commit -m'
+alias k='kubectl'
 
 batdiff() {
     git diff --name-only --diff-filter=d | xargs bat --diff
