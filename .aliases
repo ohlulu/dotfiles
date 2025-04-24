@@ -11,13 +11,8 @@ COLOR_MAGENTA="\033[0;35m"
 alias gg='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias ggc='gg commit -m'
 alias k='kubectl'
-alias shell='/bin/bash'
 
-batdiff() {
-    git diff --name-only --diff-filter=d | xargs bat --diff
-}
-
-ggsync() {
+ggs() {
     gg pull
     gg status | grep "modified" | awk '{$1=""; print $0}' | sed 's/^[ \t]*//' | while read -r file; do
         gg add -f "$file"
