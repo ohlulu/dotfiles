@@ -37,23 +37,37 @@
     "command": "-references-view.findReferences",
     "when": "editorHasReferenceProvider"
   },
-  {
-    "key": "ctrl+cmd+left",
-    "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup",
-  },
-  {
-    "key": "ctrl+cmd+left",
-    "command": "-workbench.action.terminal.resizePaneLeft",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+cmd+left",
-    "command": "-workbench.action.moveEditorToPreviousGroup"
-  },
-  {
-    "key": "ctrl+cmd+right",
-    "command": "workbench.action.openNextRecentlyUsedEditorInGroup",
-  },
+  // {
+  //   "key": "ctrl+cmd+left",
+  //   "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup",
+  // },
+  // {
+  //   "key": "ctrl+cmd+left",
+  //   "command": "-workbench.action.terminal.resizePaneLeft",
+  //   "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "ctrl+cmd+left",
+  //   "command": "-workbench.action.moveEditorToPreviousGroup"
+  // },
+  // {
+  //   "key": "ctrl+cmd+right",
+  //   "command": "workbench.action.openNextRecentlyUsedEditorInGroup",
+  // },
+  // {
+  //   "key": "ctrl+cmd+right",
+  //   "command": "-workbench.action.terminal.resizePaneRight",
+  //   "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "ctrl+cmd+right",
+  //   "command": "-workbench.action.moveEditorToNextGroup"
+  // },
+  // {
+  //   "key": "ctrl+cmd+right",
+  //   "command": "-quickInput.acceptInBackground",
+  //   "when": "cursorAtEndOfQuickInputBox && inQuickInput && quickInputType == 'quickPick' || inQuickInput && !inputFocus && quickInputType == 'quickPick'"
+  // },
   // ===== Editor View Control =====
   {
     "key": "cmd+0",
@@ -346,20 +360,6 @@
     "key": "ctrl+shift+-",
     "command": "-workbench.action.navigateForward",
     "when": "canNavigateForward"
-  },
-  {
-    "key": "ctrl+cmd+right",
-    "command": "-workbench.action.terminal.resizePaneRight",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+cmd+right",
-    "command": "-workbench.action.moveEditorToNextGroup"
-  },
-  {
-    "key": "ctrl+cmd+right",
-    "command": "-quickInput.acceptInBackground",
-    "when": "cursorAtEndOfQuickInputBox && inQuickInput && quickInputType == 'quickPick' || inQuickInput && !inputFocus && quickInputType == 'quickPick'"
   },
   {
     "key": "cmd+h",
