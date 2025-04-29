@@ -24,23 +24,39 @@
   },
   {
     "key": "shift+cmd+h",
-    "command": "references-view.showCallHierarchy",
-    "when": "editorHasCallHierarchyProvider"
+    "command": "references-view.findReferences",
+    "when": "editorHasReferenceProvider"
   },
   {
     "key": "cmd+h",
-    "command": "references-view.findReferences",
-    "when": "editorHasReferenceProvider"
+    "command": "references-view.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider"
   },
   {
     "key": "shift+alt+f12",
     "command": "-references-view.findReferences",
     "when": "editorHasReferenceProvider"
   },
-  // {
-  //   "key": "ctrl+cmd+left",
-  //   "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup",
-  // },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
   // {
   //   "key": "ctrl+cmd+left",
   //   "command": "-workbench.action.terminal.resizePaneLeft",
@@ -49,10 +65,6 @@
   // {
   //   "key": "ctrl+cmd+left",
   //   "command": "-workbench.action.moveEditorToPreviousGroup"
-  // },
-  // {
-  //   "key": "ctrl+cmd+right",
-  //   "command": "workbench.action.openNextRecentlyUsedEditorInGroup",
   // },
   // {
   //   "key": "ctrl+cmd+right",
@@ -212,11 +224,6 @@
     "key": "ctrl+cmd+r",
     "command": "sweetpad.build.launch"
   },
-  // ===== Project Management =====
-  {
-    "key": "cmd+p cmd+m",
-    "command": "workbench.view.extension.project-manager"
-  },
   // ===== Unbind Keys =====
   {
     "key": "cmd+b",
@@ -350,16 +357,6 @@
     "key": "shift+alt+h",
     "command": "-references-view.showCallHierarchy",
     "when": "editorHasCallHierarchyProvider"
-  },
-  {
-    "key": "ctrl+-",
-    "command": "-workbench.action.navigateBack",
-    "when": "canNavigateBack"
-  },
-  {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.navigateForward",
-    "when": "canNavigateForward"
   },
   {
     "key": "cmd+h",
