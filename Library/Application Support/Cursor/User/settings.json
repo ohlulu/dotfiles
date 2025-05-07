@@ -143,4 +143,5 @@
   "git.replaceTagsWhenPull": true,
   "git.suggestSmartCommit": false,
   "indentRainbow.errorColor": "",
+  "git.autofetch": true,
 }
