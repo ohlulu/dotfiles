@@ -1,17 +1,5 @@
 #!/bin/sh
 
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we're about to change
-osascript -e 'tell application "System Preferences" to quit'
-
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-echo "Start install macOS perference."
-
 ###############################################################################
 # macOS 15.4.1 System Configuration Script                                    #
 # Updated on May 2025                                                         #
@@ -62,30 +50,43 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 defaults write -g com.apple.trackpad.scaling -float 2.5
 defaults write -g com.apple.trackpad.scrolling -float 0.588
 
+# Enable force click
+defaults write -g com.apple.trackpad.forceClick -bool true
+
+# Trackpad gesture settings
+defaults write com.apple.AppleMultitouchTrackpad TrackpadPinch -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRotate -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGesture -int 1
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
+
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Set a blazingly fast keyboard repeat rate
-# The fastest value on GUI is 2 
 defaults write NSGlobalDomain KeyRepeat -int 2
-# The fastest value on GUI is 15 
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Enable function keys as standard function keys
 defaults write NSGlobalDomain "com.apple.keyboard.fnState" -bool true
 
-# Disable press-and-hold for keys in favor of key repeat (e.g.,wwwwwwwwwwwwwwwwwww)
+# Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Configure other text substitution settings
+# Configure text substitution settings
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool true
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool true
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool true
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Mouse settings
+defaults write com.apple.AppleMultitouchMouse MouseButtonDivision -int 55
+defaults write com.apple.AppleMultitouchMouse MouseButtonMode -string "OneButton"
+defaults write com.apple.AppleMultitouchMouse MouseHorizontalScroll -bool true
+defaults write com.apple.AppleMultitouchMouse MouseMomentumScroll -bool true
+defaults write com.apple.AppleMultitouchMouse MouseTwoFingerDoubleTapGesture -int 3
+defaults write com.apple.AppleMultitouchMouse MouseTwoFingerHorizSwipeGesture -int 2
 
 ################################################################################
 # Computer name & Sharing                                                      #
@@ -129,6 +130,9 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
+
+# Set App Store video auto play setting to on
+defaults write com.apple.AppStore AutoPlayVideoSetting -string "on"
 
 # Enable the automatic update check
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
@@ -205,6 +209,30 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 # Disable sound effects when changing volume
 defaults write NSGlobalDomain "com.apple.sound.beep.flash" -bool false
 
+# Set 24-hour time
+defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
+
+################################################################################
+# Control Center & Menu Bar                                                    #
+################################################################################
+
+# Configure menu bar items (visibility)
+defaults write com.apple.controlcenter "NSStatusItem Visible Battery" -bool true
+defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -bool true
+defaults write com.apple.controlcenter "NSStatusItem Visible BentoBox" -bool true 
+defaults write com.apple.controlcenter "NSStatusItem Visible Clock" -bool true
+defaults write com.apple.controlcenter "NSStatusItem Visible FocusModes" -bool true
+defaults write com.apple.controlcenter "NSStatusItem Visible Shortcuts" -bool true
+defaults write com.apple.controlcenter "NSStatusItem Visible NowPlaying" -bool false
+defaults write com.apple.controlcenter "NSStatusItem Visible AudioVideoModule" -bool false
+
+# Set menu bar item positions
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position Battery" -int 57
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position BentoBox" -int 31
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position WiFi" -int 10370
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position FocusModes" -int 20420
+defaults write com.apple.controlcenter "NSStatusItem Preferred Position Shortcuts" -int 20535
+
 ################################################################################
 # Mission Control                                                              #
 ################################################################################
@@ -212,7 +240,7 @@ defaults write NSGlobalDomain "com.apple.sound.beep.flash" -bool false
 # Speed up Mission Control animation
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
-# Don't group windows by application in Mission Control
+# Group windows by application in Mission Control (default)
 defaults write com.apple.dock expose-group-by-app -bool true
 
 # Don't automatically rearrange Spaces based on most recent use
@@ -380,7 +408,7 @@ defaults write com.apple.dock launchanim -bool false
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
-# Disable show recently used apps in a separate section of the Dock.
+# Disable show recently used apps in a separate section of the Dock
 defaults write com.apple.dock "show-recents" -bool false
 
 # Disable Dashboard
@@ -399,21 +427,22 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool false
+defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
+# Add specific apps to Dock (sample - customize for your needs)
+# defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/YourApp.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+
 ################################################################################
-# Time & Locale                                                                #
+# Menu Bar Clock                                                               #
 ################################################################################
 
 # Set time zome automatically using current location
 sudo defaults write /Library/Preferences/com.apple.timezone.auto.plist Active -bool true
 
-# Menu bar clock format
-# Note: To apply these changes immediately, you may need to remove 
-# and re-add the clock in the menu bar
+# Menu bar clock format - custom format with date and 24-hour time
 defaults write com.apple.menuextra.clock DateFormat -string "MMM d 'at' HH:mm:ss"
 
 # Flash the time separators 
@@ -421,6 +450,17 @@ defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
 
 # Use analog menu bar clock
 defaults write com.apple.menuextra.clock IsAnalog -bool true
+
+################################################################################
+# iCloud                                                                       #
+################################################################################
+
+# Enable iCloud Drive
+defaults write com.apple.finder FXICloudDriveEnabled -bool true
+
+# Disable iCloud Drive Desktop and Documents sync
+defaults write com.apple.finder FXICloudDriveDesktop -bool false
+defaults write com.apple.finder FXICloudDriveDocuments -bool false
 
 ################################################################################
 # Safari & WebKit                                                              #
@@ -445,25 +485,13 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Hide Safari's bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
-# Hide Safari's sidebar in Top Sites
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-
-# Disable Safari's thumbnail cache for History and Top Sites
-defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
-
 # Enable Safari's debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-
-# Make Safari's search banners default to Contains instead of Starts With
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
-
-# Remove useless icons from Safari's bookmarks bar
-defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.W｀ebKit2DeveloperExtrasEnabled -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
@@ -479,35 +507,53 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ################################################################################
+# Mail                                                                         #
+################################################################################
+
+# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>`
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+################################################################################
+# Terminal                                                                     #
+################################################################################
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
+################################################################################
 # Miscellaneous                                                                #
 ################################################################################
 
 # Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Disable automatic capitalization
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool true
+
+# Disable smart dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool true
+
+# Enable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool true
+
 # Set language and text formats
+# Note: these are detected from your system and should be customized
 # defaults write NSGlobalDomain AppleLanguages -array "en-TW" "zh-Hant-TW"
 # defaults write NSGlobalDomain AppleLocale -string "en_TW"
 # defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
 
-# Kill affected applications
-for app in "Activity Monitor" \
-	"Address Book" \
-	"Calendar" \
-	"cfprefsd" \
-	"Contacts" \
-	"Dock" \
-	"Finder" \
-	"Google Chrome Canary" \
-	"Google Chrome" \
-	"Mail" \
-	"Messages" \
-	"Photos" \
-	"Safari" \
-	"Spectacle" \
-	"SystemUIServer" \
-	"Terminal" \
-	"iCal"; do
-	killall "${app}" &> /dev/null
-done
+################################################################################
+# Language & Input Sources                                                     #
+################################################################################
+
+# Configure input sources (customize these for your needs)
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
+    '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>252</integer><key>KeyboardLayout Name</key><string>ABC</string></dict>' \
+    '<dict><key>Bundle ID</key><string>com.apple.inputmethod.TCIM</string><key>Input Mode</key><string>com.apple.inputmethod.TCIM.Zhuyin</string><key>InputSourceKind</key><string>Input Mode</string></dict>' \
+    '<dict><key>Bundle ID</key><string>com.apple.inputmethod.TCIM</string><key>InputSourceKind</key><string>Keyboard Input Method</string></dict>' \
+    '<dict><key>Bundle ID</key><string>com.apple.CharacterPaletteIM</string><key>InputSourceKind</key><string>Non Keyboard Input Method</string></dict>'
+
+# Set Function key behavior
+defaults write com.apple.HIToolbox AppleFnUsageType -int 2
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
