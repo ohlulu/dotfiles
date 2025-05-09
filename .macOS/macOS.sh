@@ -1,5 +1,17 @@
 #!/bin/sh
 
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we're about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+echo "Start install macOS perference."
+
 ###############################################################################
 # macOS 15.4.1 System Configuration Script                                    #
 # Updated on May 2025                                                         #
@@ -451,7 +463,7 @@ defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.W｀ebKit2DeveloperExtrasEnabled -bool true
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
@@ -478,4 +490,24 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # defaults write NSGlobalDomain AppleLocale -string "en_TW"
 # defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
 
+# Kill affected applications
+for app in "Activity Monitor" \
+	"Address Book" \
+	"Calendar" \
+	"cfprefsd" \
+	"Contacts" \
+	"Dock" \
+	"Finder" \
+	"Google Chrome Canary" \
+	"Google Chrome" \
+	"Mail" \
+	"Messages" \
+	"Photos" \
+	"Safari" \
+	"Spectacle" \
+	"SystemUIServer" \
+	"Terminal" \
+	"iCal"; do
+	killall "${app}" &> /dev/null
+done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
