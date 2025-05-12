@@ -144,4 +144,5 @@
   "git.suggestSmartCommit": false,
   "indentRainbow.errorColor": "",
   "git.autofetch": true,
+  "gitProjectManager.storeRepositoriesBetweenSessions": true,
 }
