@@ -12,7 +12,6 @@
   "editor.fontFamily": "SF Mono Regular",
   "editor.insertSpaces": true,
   "terminal.integrated.fontFamily": "monospace",
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
   "update.releaseTrack": "prerelease",
   "window.newWindowDimensions": "inherit",
@@ -145,4 +144,5 @@
   "indentRainbow.errorColor": "",
   "git.autofetch": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
+  "workbench.productIconTheme": "fluent-icons",
 }
