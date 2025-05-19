@@ -12,6 +12,7 @@
   "editor.fontFamily": "SF Mono Regular",
   "editor.insertSpaces": true,
   "terminal.integrated.fontFamily": "monospace",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.orientation": "vertical",
   "update.releaseTrack": "prerelease",
   "window.newWindowDimensions": "inherit",
@@ -68,7 +69,7 @@
   "markdown-preview-enhanced.codeBlockTheme": "vue.css",
   "markdown.extension.toc.levels": "3..6",
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // YAML
   "[yaml]": {
@@ -143,6 +144,5 @@
   "git.suggestSmartCommit": false,
   "indentRainbow.errorColor": "",
   "git.autofetch": true,
-  "gitProjectManager.storeRepositoriesBetweenSessions": true,
   "workbench.productIconTheme": "fluent-icons",
 }
