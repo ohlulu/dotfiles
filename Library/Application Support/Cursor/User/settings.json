@@ -145,5 +145,4 @@
   "git.autofetch": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
   "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.color": "#FFFFFF",
 }
