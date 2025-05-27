@@ -68,7 +68,7 @@
   "markdown-preview-enhanced.codeBlockTheme": "vue.css",
   "markdown.extension.toc.levels": "3..6",
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   // YAML
   "[yaml]": {
@@ -144,5 +144,8 @@
   "indentRainbow.errorColor": "",
   "git.autofetch": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "fluent-icons",
+  "extensions.ignoreRecommendations": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "workbench.editor.enablePreview": false,
 }
