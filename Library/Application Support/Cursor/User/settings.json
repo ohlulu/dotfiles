@@ -94,6 +94,11 @@
     "editor.defaultFormatter": "sweetpad.sweetpad",
     "editor.formatOnSave": true
   },
+  "sweetpad.format.path": "/opt/homebrew/bin/swift-format",
+  "sweetpad.format.args": [
+    "--in-place",
+    "${file}"
+  ],
   // SQL
   "[sql]": {
     "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
@@ -150,4 +155,5 @@
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "material-icon-theme",
   "cursor.composer.textSizeScale": 1.15,
+  "liveServer.settings.donotShowInfoMsg": true,
 }
