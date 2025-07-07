@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Search(*)",
+      "Search(pattern:*)",
+      "Search(pattern:*, include:*)",
+      "Read(*)",
+      "Write(*)"
+    ]
+  }
+}
