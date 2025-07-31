@@ -478,4 +478,8 @@
     },
     "when": "terminalFocus"
 },
+{
+    "key": "cmd+e",
+    "command": "composerMode.background"
+},
 ]
