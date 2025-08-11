@@ -153,8 +153,8 @@
   "workbench.productIconTheme": "fluent-icons",
   "extensions.ignoreRecommendations": true,
   "diffEditor.ignoreTrimWhitespace": true,
-  "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "material-icon-theme",
   "cursor.composer.textSizeScale": 1.15,
   "liveServer.settings.donotShowInfoMsg": true,
+  "D2.previewLayout": "elk",
 }
