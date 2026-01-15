@@ -1,160 +1,159 @@
 {
-  // General IDE settings
-  "files.dialog.defaultPath": "/Users/ohlulu/Developer",
-  "editor.inlayHints.enabled": "offUnlessPressed",
-  "editor.semanticHighlighting.enabled": true,
-  "editor.minimap.enabled": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
-  "editor.fontSize": 15,
-  "editor.lineHeight": 23,
-  "editor.fontFamily": "SF Mono Regular",
-  "terminal.integrated.fontFamily": "monospace",
-  "workbench.activityBar.orientation": "vertical",
-  "update.releaseTrack": "prerelease",
-  "window.newWindowDimensions": "inherit",
-  "files.autoSave": "afterDelay",
-  "files.exclude": {
-    "**/__pycache__": true
-  },
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "security.workspace.trust.untrustedFiles": "open",
-  "workbench.colorTheme": "One Dark Pro",
-  "oneDarkPro.color": {
-    "chalky": "#c4b28a",
-    "coral": "#87a987",
-    "dark": "#5c6370",
-    "deepRed": "#BE5046",
-    "error": "#FF5D62",
-    "fountainBlue": "#7FB4CA",
-    "green": "#c4746e",
-    "invalid": "#c5c9c5",
-    "lightDark": "#7f848e",
-    "lightWhite": "#abb2bf",
-    "malibu": "#7E9CD8",
-    "purple": "#c678dd",
-    "whiskey": "#d19a66"
-  },
-  "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#57595e94"
-  },
-  // Git related settings
-  "git.confirmSync": false,
-  "git.openRepositoryInParentFolders": "always",
-  "gitlens.gitCommands.skipConfirmations": [
-    "fetch:command",
-    "stash-push:command",
-    "switch:command"
-  ],
-  // --------Language specific settings--------
-  // HTML
-  "[html]": {
-    "editor.defaultFormatter": "mohd-akram.vscode-html-format"
-  },
-  // JSON
-  "[json]": {
+    // General IDE settings
+    "files.dialog.defaultPath": "/Users/ohlulu/Developer",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.minimap.enabled": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 23,
+    "editor.fontFamily": "SF Mono Regular",
+    "terminal.integrated.fontFamily": "monospace",
+    "workbench.activityBar.orientation": "vertical",
+    "update.releaseTrack": "prerelease",
+    "window.newWindowDimensions": "inherit",
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "One Dark Pro",
+    "oneDarkPro.color": {
+        "chalky": "#c4b28a",
+        "coral": "#87a987",
+        "dark": "#5c6370",
+        "deepRed": "#BE5046",
+        "error": "#FF5D62",
+        "fountainBlue": "#7FB4CA",
+        "green": "#c4746e",
+        "invalid": "#c5c9c5",
+        "lightDark": "#7f848e",
+        "lightWhite": "#abb2bf",
+        "malibu": "#7E9CD8",
+        "purple": "#c678dd",
+        "whiskey": "#d19a66"
+    },
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#57595e94"
+    },
+    // Git related settings
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command"
+    ],
+    // --------Language specific settings--------
+    // HTML
+    "[html]": {
+        "editor.defaultFormatter": "mohd-akram.vscode-html-format"
+    },
+    // JSON
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "prettier.tabWidth": 2,
+    },
+    // JSONC
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // Markdown
+    "markdown-preview-enhanced.previewTheme": "vue.css",
+    "markdown-preview-enhanced.codeBlockTheme": "vue.css",
+    "markdown.extension.toc.levels": "3..6",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    // YAML
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "yaml.schemas": {
+        "file:///Users/ohlulu/.vscode/extensions/atlassian.atlascode-3.0.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+        "editor.detectIndentation": false
+    },
+    // JavaScript
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "prettier.tabWidth": 2
+    },
+    // Python
+    "python.createEnvironment.trigger": "off",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    // Swift
+    "[swift]": {
+        "editor.defaultFormatter": "sweetpad.sweetpad",
+        "editor.formatOnSave": true
+    },
+    "sweetpad.format.path": "/opt/homebrew/bin/swift-format",
+    "sweetpad.format.args": [
+        "--in-place",
+        "${file}"
+    ],
+    // SQL
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
+    // Go
+    "go.toolsManagement.autoUpdate": true,
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    // Ruby
+    "solargraph.commandPath": "/Users/ohlulu/.rbenv/shims/solargraph",
+    "solargraph.useBundler": false,
+    "ruby.rubocop.onSave": true,
+    // Dart
+    "dart.flutterSdkPath": "~/flutter",
+    // Prettier
     "prettier.tabWidth": 2,
-  },
-  // JSONC
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  // Markdown
-  "markdown-preview-enhanced.previewTheme": "vue.css",
-  "markdown-preview-enhanced.codeBlockTheme": "vue.css",
-  "markdown.extension.toc.levels": "3..6",
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
-  // YAML
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "yaml.schemas": {
-    "file:///Users/ohlulu/.vscode/extensions/atlassian.atlascode-3.0.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
-    "editor.detectIndentation": false
-  },
-  // JavaScript
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.tabWidth": 2
-  },
-  // Python
-  "python.createEnvironment.trigger": "off",
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  // Swift
-  "[swift]": {
-    "editor.defaultFormatter": "sweetpad.sweetpad",
-    "editor.formatOnSave": true
-  },
-  "sweetpad.format.path": "/opt/homebrew/bin/swift-format",
-  "sweetpad.format.args": [
-    "--in-place",
-    "${file}"
-  ],
-  // SQL
-  "[sql]": {
-    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
-  },
-  // Go
-  "go.toolsManagement.autoUpdate": true,
-  "[go]": {
-    "editor.defaultFormatter": "golang.go"
-  },
-  // Ruby
-  "solargraph.commandPath": "/Users/ohlulu/.rbenv/shims/solargraph",
-  "solargraph.useBundler": false,
-  "ruby.rubocop.onSave": true,
-  // Dart
-  "dart.flutterSdkPath": "~/flutter",
-  // Prettier
-  "prettier.tabWidth": 2,
-  "prettier.printWidth": 150,
-  // IndentRainbow
-  "indentRainbow.colors": [
-    "rgba(255,255,64,0.3)",
-    "rgba(127,255,127,0.3)",
-    "rgba(255,127,255,0.3)",
-    "rgba(79,236,236,0.3)"
-  ],
-  "indentRainbow.indicatorStyle": "light",
-  "indentRainbow.lightIndicatorStyleLineWidth": 1,
-  // 外掛設定 - Cursor
-  "cursor.cmdk.autoSelect": false,
-  "cursor.composer.agentLoopOnLints": false,
-  "cursor-retrieval.canAttemptGithubLogin": false,
-  // git repot manager
-  "gitProjectManager.baseProjectsFolders": [
-    "~/Developer/"
-  ],
-  // 開發工具設定
-  "lldb.library": "/Applications/Xcode-15.4.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-  "lldb.launch.expressions": "native",
-  "makefile.configureOnOpen": true,
-  "cmake.showOptionsMovedNotification": false,
-  // 其他設定
-  "redhat.telemetry.enabled": true,
-  "cursor.cpp.disabledLanguages": [],
-  "cursor.terminal.usePreviewBox": true,
-  "cursor.composer.shouldChimeAfterChatFinishes": true,
-  "git.replaceTagsWhenPull": true,
-  "git.suggestSmartCommit": false,
-  "indentRainbow.errorColor": "",
-  "git.autofetch": true,
-  "gitProjectManager.storeRepositoriesBetweenSessions": true,
-  "workbench.productIconTheme": "fluent-icons",
-  "extensions.ignoreRecommendations": true,
-  "diffEditor.ignoreTrimWhitespace": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "cursor.composer.textSizeScale": 1.15,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "D2.previewLayout": "elk",
+    "prettier.printWidth": 150,
+    // IndentRainbow
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.3)",
+        "rgba(127,255,127,0.3)",
+        "rgba(255,127,255,0.3)",
+        "rgba(79,236,236,0.3)"
+    ],
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    // 外掛設定 - Cursor
+    "cursor.cmdk.autoSelect": false,
+    "cursor.composer.agentLoopOnLints": false,
+    "cursor-retrieval.canAttemptGithubLogin": false,
+    // git repot manager
+    "gitProjectManager.baseProjectsFolders": [
+        "~/Developer/"
+    ],
+    // 開發工具設定
+    "lldb.library": "/Applications/Xcode-15.4.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "lldb.launch.expressions": "native",
+    "makefile.configureOnOpen": true,
+    "cmake.showOptionsMovedNotification": false,
+    // 其他設定
+    "redhat.telemetry.enabled": true,
+    "cursor.cpp.disabledLanguages": [],
+    "cursor.terminal.usePreviewBox": true,
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "git.replaceTagsWhenPull": true,
+    "git.suggestSmartCommit": false,
+    "indentRainbow.errorColor": "",
+    "git.autofetch": true,
+    "gitProjectManager.storeRepositoriesBetweenSessions": true,
+    "workbench.productIconTheme": "fluent-icons",
+    "extensions.ignoreRecommendations": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "cursor.composer.textSizeScale": 1.15,
+    "liveServer.settings.donotShowInfoMsg": true,
 }

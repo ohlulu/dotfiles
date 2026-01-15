@@ -16,10 +16,6 @@
         "XCODEBUILDMCP_GROUP_PROJECT_DISCOVERY": "true",
         "SENTRY_DISABLED": "true"
       }
-    },
-    "apple-docs": {
-      "command": "npx",
-      "args": ["-y", "@kimsungwhee/apple-docs-mcp"]
     }
   }
 }
