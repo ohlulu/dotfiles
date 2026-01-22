@@ -1,16 +1,20 @@
 {
   "mcpServers": {
-    "duckduckgo-search": {
-      "command": "npx",
-      "args": ["-y", "duckduckgo-mcp-server"]
-    },
     "sequential-thinking": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
     },
     "XcodeBuildMCP": {
       "command": "mise",
-      "args": ["x", "npm:xcodebuildmcp@1.10.4", "--", "xcodebuildmcp"],
+      "args": [
+        "x",
+        "npm:xcodebuildmcp@1.10.4",
+        "--",
+        "xcodebuildmcp"
+      ],
       "env": {
         "INCREMENTAL_BUILDS_ENABLED": "true",
         "XCODEBUILDMCP_GROUP_PROJECT_DISCOVERY": "true",
