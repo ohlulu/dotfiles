@@ -157,4 +157,6 @@
   "cursor.composer.textSizeScale": 1.15,
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.accessibilitySupport": "on",
+  "explorer.confirmPasteNative": false,
+  "claudeCode.preferredLocation": "panel",
 }
