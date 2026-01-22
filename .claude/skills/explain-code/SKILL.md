@@ -3,7 +3,9 @@ name: commit
 description: Commits code to the repository. Use when the user asks "commit", "commit the code" or "commit the changes" or "commit the changes to the repository"
 ---
 
-When committing code, always include:
+Analyze the differences and, if necessary, split the changes into separate commits with meaningful commit messages.
+
+each committing code, should always include:
 
 1. **Commit message**: A short, descriptive message about the changes
 2. **Commit type**: The type of commit (feat, fix, chore, etc.)
