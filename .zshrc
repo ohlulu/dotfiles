@@ -103,6 +103,3 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 ssh-add --apple-load-keychain 2> /dev/null
-
-
-alias claude="/Users/ohlulu/.claude/local/claude"
