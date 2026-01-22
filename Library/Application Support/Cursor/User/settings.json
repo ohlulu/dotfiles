@@ -159,4 +159,5 @@
   "editor.accessibilitySupport": "on",
   "explorer.confirmPasteNative": false,
   "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "default",
 }
