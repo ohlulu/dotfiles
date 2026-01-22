@@ -12,6 +12,7 @@ alias gg='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias ggc='gg commit -m'
 alias k='kubectl'
 alias claude="/Users/ohlulu/.claude/local/claude"
+alias claude-dev='claude --system-prompt "$(cat ~/.claude/contexts/dev.md)"'
 
 ggs() {
     gg pull

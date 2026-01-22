@@ -103,3 +103,4 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 ssh-add --apple-load-keychain 2> /dev/null
+export PATH="$HOME/.local/bin:$PATH"
