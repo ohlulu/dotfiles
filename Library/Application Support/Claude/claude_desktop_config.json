@@ -11,6 +11,10 @@
   },
   "preferences": {
     "menuBarEnabled": false,
-    "quickEntryShortcut": "off"
+    "quickEntryShortcut": "off",
+    "localAgentModeTrustedFolders": [
+      "/Users/ohlulu/Documents/Canada receipt",
+      "/Users/ohlulu/.claude"
+    ]
   }
 }
