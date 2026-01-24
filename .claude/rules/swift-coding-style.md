@@ -87,24 +87,26 @@ enum Network {
 ALWAYS handle errors with Swift's type system:
 
 ```swift
-// Define specific errors
-enum NetworkError: Error {
-    case invalidURL
-    case serverError(statusCode: Int)
-    case decodingFailed
+// Define errors as nested type (see Nested Types section)
+enum Network {
+    enum Error: Swift.Error {
+        case invalidURL
+        case serverError(statusCode: Int)
+        case decodingFailed
+    }
 }
 
 // Use Result or throws
 func fetchData() async throws -> Data {
     guard let url = URL(string: endpoint) else {
-        throw NetworkError.invalidURL
+        throw Network.Error.invalidURL
     }
 
     let (data, response) = try await URLSession.shared.data(from: url)
 
     guard let httpResponse = response as? HTTPURLResponse,
           (200...299).contains(httpResponse.statusCode) else {
-        throw NetworkError.serverError(statusCode: (response as? HTTPURLResponse)?.statusCode ?? 0)
+        throw Network.Error.serverError(statusCode: (response as? HTTPURLResponse)?.statusCode ?? 0)
     }
 
     return data
@@ -150,3 +152,4 @@ Before marking work complete:
 - [ ] No print statements in production
 - [ ] No hardcoded values (use constants)
 - [ ] Access control is explicit (private, internal, public)
+- [ ] Related simple types use nested structure (`Parent.Error`, `Parent.State`)
