@@ -87,19 +87,19 @@ extension XCTestCase {
 
 ```swift
 // Define protocol
-protocol UserServiceProtocol {
+protocol UserStorage {
     func fetchUser(id: String) async throws -> User?
 }
 
 // Production implementation
-final class UserService: UserServiceProtocol {
+final class DBUserStorage: UserStorage {
     func fetchUser(id: String) async throws -> User? {
         // Real implementation
     }
 }
 
 // Mock for testing
-final class MockUserService: UserServiceProtocol {
+final class UserStorageSpy: UserStorage {
     var mockUser: User?
     var shouldThrowError = false
     var fetchUserCallCount = 0

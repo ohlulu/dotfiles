@@ -140,6 +140,28 @@ let name = user.name ?? "Unknown"
 - **Constants**: lowerCamelCase (`maxRetryCount`)
 - **Protocols**: UpperCamelCase, often `-able`, `-ible`, `-ing` (`Codable`, `Loading`)
 
+## Documentation Comments
+
+Use documentation comments (`///`) instead of regular comments (`//`) for explaining code:
+
+```swift
+// WRONG: Regular comment
+var pricingType: String // "simple" | "variant"
+var price: String // Decimal as String
+
+// CORRECT: Documentation comment
+/// Pricing type: "simple" | "variant"
+var pricingType: String
+/// Decimal stored as String for precision.
+var price: String
+```
+
+**Guidelines:**
+- Use `///` for type, property, and method documentation
+- Keep documentation concise (one line when possible)
+- Document non-obvious behavior or constraints
+- No need to document self-explanatory properties
+
 ## Code Quality Checklist
 
 Before marking work complete:

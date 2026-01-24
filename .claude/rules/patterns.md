@@ -53,19 +53,19 @@ final class UserRepository: Repository {
 
 ```swift
 // Define protocol
-protocol UserServiceProtocol {
+protocol UserStorage {
     func fetchUser(id: String) async throws -> User?
 }
 
 // Production implementation
-final class UserService: UserServiceProtocol {
+final class DBUserStorage: UserStorage {
     func fetchUser(id: String) async throws -> User? {
         // Real implementation
     }
 }
 
 // Mock for testing
-final class MockUserService: UserServiceProtocol {
+final class UserStorageSpy: UserStorage {
     var mockUser: User?
     var shouldThrowError = false
 
@@ -77,10 +77,10 @@ final class MockUserService: UserServiceProtocol {
 
 // Usage with DI
 final class UserViewModel: ObservableObject {
-    private let service: UserServiceProtocol
+    private let storage: UserStorage
 
-    init(service: UserServiceProtocol = UserService()) {
-        self.service = service
+    init(storage: UserStorage = DBUserStorage()) {
+        self.storage = storage
     }
 }
 ```

@@ -16,43 +16,6 @@ Before ANY commit:
 ```swift
 // NEVER: Hardcoded secrets
 let apiKey = "sk-proj-xxxxx"
-
-// ALWAYS: Use Keychain
-final class KeychainService {
-    static func save(key: String, value: String) throws {
-        let data = value.data(using: .utf8)!
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrAccount as String: key,
-            kSecValueData as String: data
-        ]
-
-        SecItemDelete(query as CFDictionary)
-        let status = SecItemAdd(query as CFDictionary, nil)
-        guard status == errSecSuccess else {
-            throw KeychainError.saveFailed
-        }
-    }
-
-    static func load(key: String) throws -> String? {
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrAccount as String: key,
-            kSecReturnData as String: true
-        ]
-
-        var result: AnyObject?
-        let status = SecItemCopyMatching(query as CFDictionary, &result)
-
-        guard status == errSecSuccess,
-              let data = result as? Data,
-              let value = String(data: data, encoding: .utf8) else {
-            return nil
-        }
-
-        return value
-    }
-}
 ```
 
 ## Configuration via Environment
