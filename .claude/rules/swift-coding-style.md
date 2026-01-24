@@ -37,6 +37,51 @@ MANY SMALL FILES > FEW LARGE FILES:
 - One type per file (generally)
 - Organize by feature/domain
 
+## Nested Types
+
+When types are **simple and closely related**, prefer nested types over separate files:
+
+```swift
+// WRONG: Separate file for NetworkError
+// NetworkError.swift
+enum NetworkError: Error {
+    case invalidURL
+    case serverError(statusCode: Int)
+}
+
+// CORRECT: Nested type within parent
+// Network.swift
+enum Network {
+    enum Error: Swift.Error {
+        case invalidURL
+        case serverError(statusCode: Int)
+        case decodingFailed
+    }
+
+    struct Request {
+        let url: URL
+        let method: HTTPMethod
+    }
+
+    enum HTTPMethod {
+        case get, post, put, delete
+    }
+}
+
+// Usage: Network.Error, Network.Request, Network.HTTPMethod
+```
+
+**When to use nested types:**
+- Error types specific to a module (`Network.Error`, `Parser.Error`)
+- Configuration types (`Service.Configuration`)
+- State enums (`ViewModel.State`, `View.Action`)
+- Small helper types used only by parent
+
+**When to use separate files:**
+- Type is used across multiple modules
+- Type has complex logic (>50 lines)
+- Type needs its own tests
+
 ## Error Handling
 
 ALWAYS handle errors with Swift's type system:
