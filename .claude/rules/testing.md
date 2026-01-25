@@ -112,6 +112,73 @@ final class UserStorageSpy: UserStorage {
 }
 ```
 
+### Spy Pattern (Complete)
+
+Spies combine Stub (control return values) and Mock (record calls) capabilities. Use enums to record all calls, preserving order.
+
+```swift
+final class StoreSpy: DataStore {
+    // Record all calls (preserving order)
+    enum Message: Equatable {
+        case save([Item])
+        case load
+        case delete(UUID)
+    }
+
+    private(set) var messages: [Message] = []
+
+    // Control return values
+    private var loadResult: Result<[Item], Error> = .success([])
+
+    // MARK: - DataStore Implementation
+
+    func save(_ items: [Item]) throws {
+        messages.append(.save(items))
+    }
+
+    func load() throws -> [Item] {
+        messages.append(.load)
+        return try loadResult.get()
+    }
+
+    func delete(id: UUID) throws {
+        messages.append(.delete(id))
+    }
+
+    // MARK: - Test Control Methods
+
+    func completeLoad(with items: [Item]) {
+        loadResult = .success(items)
+    }
+
+    func completeLoadWithError(_ error: Error) {
+        loadResult = .failure(error)
+    }
+}
+```
+
+**Usage:**
+
+```swift
+func test_save_then_load_messagesInCorrectOrder() {
+    let spy = StoreSpy()
+    let sut = DataManager(store: spy)
+
+    sut.save([item])
+    _ = try? sut.load()
+
+    XCTAssertEqual(spy.messages, [
+        .save([item]),
+        .load
+    ])
+}
+```
+
+**Benefits:**
+- Verifies call order, not just call count
+- Single source of truth for all interactions
+- Easy to add new operations
+
 ## Test Naming Convention
 
 ```
