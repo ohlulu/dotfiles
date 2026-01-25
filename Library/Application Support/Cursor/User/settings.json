@@ -158,6 +158,6 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.accessibilitySupport": "on",
   "explorer.confirmPasteNative": false,
-  "claudeCode.preferredLocation": "panel",
+  "claudeCode.preferredLocation": "sidebar",
   "claudeCode.selectedModel": "default",
 }
