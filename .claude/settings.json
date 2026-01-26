@@ -2,41 +2,73 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
-      "Search(*)",
-      "Search(pattern:*)",
-      "Search(pattern:*, include:*)",
       "Read(*)",
       "Write(*)",
       "Edit(*)",
       "Glob(*)",
-      "Which(*)",
-      "Bash(mgrep:*)",
       "Grep(*)",
+      "Search(*)",
+      "Which(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+
       "Bash(ls:*)",
-      "Bash(wc:*)",
       "Bash(pwd:*)",
-      "Bash(tree:*)",
       "Bash(cd:*)",
+      "Bash(cat:*)",
+      "Bash(wc:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(diff:*)",
+
       "Bash(cp:*)",
       "Bash(mv:*)",
       "Bash(rm:*)",
       "Bash(mkdir:*)",
       "Bash(touch:*)",
+      "Bash(ln:*)",
       "Bash(chmod:*)",
       "Bash(chown:*)",
       "Bash(chgrp:*)",
-      "Bash(ln:*)",
-      "Bash(cat:*)",
-      "Bash(ls:*)",
-      "Bash(git:*)",
-      "MCP(context7:*)",
-      "Bash(node -e:*)",
-      "Bash(python3:*)",
-      "Bash(env:*)",
-      "Bash(/usr/bin/swift package plugin:*)",
+
       "Bash(echo:*)",
-      "Bash(/usr/bin/swift package:*)",
-      "Bash(/usr/bin/swift build:*)"
+      "Bash(env:*)",
+      "Bash(pushd:*)",
+      "Bash(popd)",
+
+      "Bash(git:*)",
+      "Bash(gh:*)",
+
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(pnpm:*)",
+      "Bash(yarn:*)",
+      "Bash(node:*)",
+
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip:*)",
+      "Bash(pip3:*)",
+
+      "Bash(swift:*)",
+      "Bash(swiftformat:*)",
+      "Bash(/usr/bin/swift:*)",
+      "Bash(/usr/bin/xcodebuild:*)",
+      "Bash(SHELL=/bin/bash /usr/bin/swift:*)",
+      "Bash(SHELL=/bin/bash /usr/bin/xcodebuild:*)",
+      "Bash(xcrun:*)",
+
+      "Bash(brew:*)",
+      "Bash(jq:*)",
+      "Bash(curl:*)",
+      "Bash(open:*)",
+      "Bash(mgrep:*)",
+
+      "MCP(*)",
+      "mcp__firecrawl__firecrawl_scrape"
     ]
   },
   "hooks": {
@@ -122,6 +154,24 @@
         ]
       },
       {
+        "matcher": "tool == \"Edit\" && tool_input.file_path matches \"\\\\.(ts|tsx|js|jsx)$\"",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const{execSync}=require('child_process');const fs=require('fs');let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const i=JSON.parse(d);const p=i.tool_input?.file_path;if(p&&fs.existsSync(p)){try{execSync('npx prettier --write \"'+p+'\"',{stdio:['pipe','pipe','pipe']})}catch(e){}}console.log(d)})\""
+          }
+        ]
+      },
+      {
+        "matcher": "tool == \"Edit\" && tool_input.file_path matches \"\\\\.swift$\"",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const{execSync}=require('child_process');const fs=require('fs');let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const i=JSON.parse(d);const p=i.tool_input?.file_path;if(p&&fs.existsSync(p)){try{execSync('swiftformat \"'+p+'\"',{stdio:['pipe','pipe','pipe']})}catch(e){}}console.log(d)})\""
+          }
+        ]
+      },
+      {
         "matcher": "tool == \"Edit\" && tool_input.file_path matches \"\\\\.(ts|tsx)$\"",
         "hooks": [
           {
@@ -157,9 +207,10 @@
     "command": "input=$(cat); user=$(whoami); cwd=$(echo \"$input\" | jq -r '.workspace.current_dir' | sed \"s|$HOME|~|g\"); model=$(echo \"$input\" | jq -r '.model.display_name'); time=$(date +%H:%M); remaining=$(echo \"$input\" | jq -r '.context_window.remaining_percentage // empty'); transcript=$(echo \"$input\" | jq -r '.transcript_path'); todo_count=$([ -f \"$transcript\" ] && grep -c '\"type\":\"todo\"' \"$transcript\" 2>/dev/null || echo 0); cd \"$(echo \"$input\" | jq -r '.workspace.current_dir')\" 2>/dev/null; branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo ''); status=''; [ -n \"$branch\" ] && { [ -n \"$(git status --porcelain 2>/dev/null)\" ] && status='*'; }; B='\\033[38;2;30;102;245m'; G='\\033[38;2;64;160;43m'; Y='\\033[38;2;223;142;29m'; M='\\033[38;2;136;57;239m'; C='\\033[38;2;23;146;153m'; R='\\033[0m'; T='\\033[38;2;76;79;105m'; printf \"${C}${user}${R}:${B}${cwd}${R}\"; [ -n \"$branch\" ] && printf \" ${G}${branch}${Y}${status}${R}\"; [ -n \"$remaining\" ] && printf \" ${M}ctx:${remaining}%%${R}\"; printf \" ${T}${model}${R} ${Y}${time}${R}\"; [ \"$todo_count\" -gt 0 ] && printf \" ${C}todos:${todo_count}${R}\"; echo"
   },
   "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": false,
+    "swift-lsp@claude-plugins-official": true,
     "context7@claude-plugins-official": false,
-    "mgrep@Mixedbread-Grep": true
+    "mgrep@Mixedbread-Grep": true,
+    "swift-concurrency@swift-concurrency-agent-skill": true
   },
   "_comments": {
     "colors": {
