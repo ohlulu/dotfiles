@@ -95,9 +95,9 @@
     "editor.defaultFormatter": "sweetpad.sweetpad",
     "editor.formatOnSave": true
   },
-  "sweetpad.format.path": "/opt/homebrew/bin/swift-format",
+  "sweetpad.format.path": "swiftformat",
   "sweetpad.format.args": [
-    "--in-place",
+    "--quiet",
     "${file}"
   ],
   // SQL
