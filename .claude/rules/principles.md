@@ -243,3 +243,74 @@ struct OrderViewModel {
     var isEmpty: Bool { order.items.isEmpty }
 }
 ```
+
+---
+
+## Swift Concurrency Principles
+
+### Default Actor Isolation per Target
+
+Configure Default Actor Isolation in Xcode's build settings per target. The compiler automatically infers `@MainActor` for all types unless explicitly opted out.
+
+**Guidelines:**
+- **UI modules** (e.g., iOS UI target) → Default to `@MainActor` to keep UI code single-threaded
+- **Non-UI or mixed modules** → Default to `nonisolated`, mark specific types/methods as `@MainActor` when needed
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  Target Type         │  Default Actor Isolation        │
+├─────────────────────────────────────────────────────────┤
+│  iOS UI Target       │  @MainActor                     │
+│  Domain/Core Module  │  nonisolated                    │
+│  Networking Module   │  nonisolated                    │
+│  Shared Utils        │  nonisolated                    │
+└─────────────────────────────────────────────────────────┘
+```
+
+### XCTestCase Classes Must Be @MainActor
+
+Mark test case classes as `@MainActor` to preserve XCTest's default behavior of running on the main thread. This eliminates warnings during Swift 6 migration and keeps tests behaving as expected.
+
+```swift
+// GOOD: Explicit @MainActor on test class
+@MainActor
+final class ProductViewModelTests: XCTestCase {
+    func test_loadProducts_updatesState() async {
+        let sut = makeSUT()
+        // Test runs on main thread as expected
+    }
+}
+```
+
+### Avoid Unsafe Concurrency Escape Hatches
+
+**Never use** `nonisolated(unsafe)` or `@unchecked Sendable` unless absolutely necessary. These bypass the compiler's concurrency safety checks and can introduce data races.
+
+```swift
+// BAD: Bypassing safety checks
+nonisolated(unsafe) var sharedState: [String] = []
+
+final class UnsafeWrapper: @unchecked Sendable {
+    var mutableData: Data  // Data race waiting to happen
+}
+
+// GOOD: Proper thread-safe design
+actor SafeState {
+    private var items: [String] = []
+
+    func append(_ item: String) {
+        items.append(item)
+    }
+}
+
+// GOOD: Immutable Sendable
+struct SafeWrapper: Sendable {
+    let data: Data  // Immutable, safe to share
+}
+```
+
+**If you must use escape hatches:**
+1. Document why it's necessary
+2. Ensure thread safety through other means (locks, queues)
+3. Isolate usage to minimal scope
+4. Add code review requirement for these patterns

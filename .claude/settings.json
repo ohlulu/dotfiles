@@ -29,7 +29,10 @@
       "Bash(cat:*)",
       "Bash(ls:*)",
       "Bash(git:*)",
-      "MCP(context7:*)"
+      "MCP(context7:*)",
+      "Bash(node -e:*)",
+      "Bash(python3:*)",
+      "Bash(env:*)"
     ]
   },
   "hooks": {
