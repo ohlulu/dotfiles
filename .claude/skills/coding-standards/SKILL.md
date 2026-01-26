@@ -1,7 +1,7 @@
 
 ---
 name: coding-standards
-description: Swift and SwiftUI coding standards and best practices. NOT for TypeScript/JavaScript.
+description: Swift and SwiftUI coding standards and best practices.
 ---
 
 # Swift Coding Standards & Best Practices
