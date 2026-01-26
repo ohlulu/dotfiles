@@ -32,7 +32,11 @@
       "MCP(context7:*)",
       "Bash(node -e:*)",
       "Bash(python3:*)",
-      "Bash(env:*)"
+      "Bash(env:*)",
+      "Bash(/usr/bin/swift package plugin:*)",
+      "Bash(echo:*)",
+      "Bash(/usr/bin/swift package:*)",
+      "Bash(/usr/bin/swift build:*)"
     ]
   },
   "hooks": {

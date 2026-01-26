@@ -118,6 +118,15 @@ func pop() {
 
 **Exception:** Performance-critical atomic operations (e.g., `fetchAndIncrement`).
 
+## CodeSmell
+
+### Comments
+If a comment explains a section of code, this section can be turned into a separate method via Extract Method. The name of the new method can be taken from the comment text itself, most likely.
+
+**When to Ignore:**
+- When explaining why something is being implemented in a particular way.
+- When explaining complex algorithms (when all other methods for simplifying the algorithm have been tried and come up short).
+
 ---
 
 ## Swift Type Design Principles
@@ -281,36 +290,3 @@ final class ProductViewModelTests: XCTestCase {
     }
 }
 ```
-
-### Avoid Unsafe Concurrency Escape Hatches
-
-**Never use** `nonisolated(unsafe)` or `@unchecked Sendable` unless absolutely necessary. These bypass the compiler's concurrency safety checks and can introduce data races.
-
-```swift
-// BAD: Bypassing safety checks
-nonisolated(unsafe) var sharedState: [String] = []
-
-final class UnsafeWrapper: @unchecked Sendable {
-    var mutableData: Data  // Data race waiting to happen
-}
-
-// GOOD: Proper thread-safe design
-actor SafeState {
-    private var items: [String] = []
-
-    func append(_ item: String) {
-        items.append(item)
-    }
-}
-
-// GOOD: Immutable Sendable
-struct SafeWrapper: Sendable {
-    let data: Data  // Immutable, safe to share
-}
-```
-
-**If you must use escape hatches:**
-1. Document why it's necessary
-2. Ensure thread safety through other means (locks, queues)
-3. Isolate usage to minimal scope
-4. Add code review requirement for these patterns
