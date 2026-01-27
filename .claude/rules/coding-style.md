@@ -162,6 +162,35 @@ var price: String
 - Document non-obvious behavior or constraints
 - No need to document self-explanatory properties
 
+## Prevent unnecessary `self`
+
+NEVER use `self` in methods that don't modify instance state:
+
+```swift
+// WRONG
+class User {
+  func doSomething() {
+    self.doSomething2()
+  }
+
+  func doSomething2() {
+    // ... some logic ...
+  }
+}
+
+// CORRECT
+class User {
+  func doSomething() {
+    self.doSomething2()
+  }
+
+  func doSomething2() {
+    // ... some logic ...
+  }
+}
+
+```
+
 ## Code Quality Checklist
 
 Before marking work complete:
