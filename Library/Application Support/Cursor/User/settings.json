@@ -160,4 +160,10 @@
   "explorer.confirmPasteNative": false,
   "claudeCode.preferredLocation": "sidebar",
   "claudeCode.selectedModel": "default",
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasWarning": {
+    "sound": "off"
+  },
 }
