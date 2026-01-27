@@ -225,16 +225,6 @@ index_store_path: .build/debug/index/store
 
 ## Common False Positives
 
-### IBOutlet / IBAction
-
-```swift
-// Periphery may flag as unused - actually connected in storyboard
-@IBOutlet weak var titleLabel: UILabel!
-@IBAction func buttonTapped(_ sender: UIButton) { }
-```
-
-**Solution**: Use `--retain-objc-annotated`
-
 ### Codable Properties
 
 ```swift
