@@ -1,7 +1,7 @@
 ---
 name: swift-build-error-resolver
 description: Swift build error resolver. Use PROACTIVELY when swift build fails, xcodebuild reports errors, or Swift Package Manager has issues. Works with .swift files, Package.swift, and Xcode projects. NOT for TypeScript or JavaScript.
-tools: Read, Write, Edit, Bash, Mgrep, Glob
+tools: [Read, Write, Edit, Bash, Mgrep, Glob]
 model: opus
 ---
 

@@ -24,7 +24,9 @@ const {
 async function main() {
   const sessionsDir = getSessionsDir();
   const today = getDateString();
-  const sessionFile = path.join(sessionsDir, `${today}-session.tmp`);
+  const shortId = getSessionIdShort();
+  // Include session ID in filename for unique per-session tracking
+  const sessionFile = path.join(sessionsDir, `${today}-${shortId}-session.tmp`);
 
   ensureDir(sessionsDir);
 

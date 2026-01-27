@@ -1,7 +1,7 @@
 ---
 name: swift-tdd-guide
 description: Swift TDD specialist enforcing test-first methodology with XCTest. Use PROACTIVELY when writing Swift features, fixing bugs, or refactoring.
-tools: Read, Write, Edit, Bash, Mgrep
+tools: [Read, Write, Edit, Bash, Mgrep]
 model: opus
 ---
 

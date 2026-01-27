@@ -1,7 +1,7 @@
 ---
 name: swift-doc-updater
 description: Swift/iOS documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation in Swift projects. Generates docs/CODEMAPS/*, updates READMEs and guides for SPM/Xcode projects.
-tools: Read, Write, Edit, Bash, Mgrep, Glob
+tools: [Read, Write, Edit, Bash, Mgrep, Glob]
 model: opus
 ---
 

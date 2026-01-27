@@ -232,29 +232,6 @@ func fetchDashboardData() async throws -> DashboardData {
 }
 ```
 
-### MainActor for UI Updates
-
-```swift
-// GOOD: MainActor for UI updates
-@MainActor
-class MarketViewModel: ObservableObject {
-    @Published var markets: [Market] = []
-    @Published var isLoading = false
-    @Published var error: Error?
-
-    func loadMarkets() async {
-        isLoading = true
-        defer { isLoading = false }
-
-        do {
-            markets = try await MarketService.shared.fetchMarkets()
-        } catch {
-            self.error = error
-        }
-    }
-}
-```
-
 ### Actors for Thread Safety
 
 ```swift
@@ -446,44 +423,6 @@ class MockMarketService: MarketServiceProtocol {
 }
 ```
 
-## File Organization
-
-### Project Structure
-
-```
-MyApp/
-├── App/
-│   ├── MyAppApp.swift
-│   └── AppDelegate.swift
-├── Features/
-│   ├── Markets/
-│   │   ├── Views/
-│   │   │   ├── MarketListView.swift
-│   │   │   └── MarketDetailView.swift
-│   │   ├── ViewModels/
-│   │   │   └── MarketViewModel.swift
-│   │   └── Models/
-│   │       └── Market.swift
-│   └── Auth/
-│       ├── Views/
-│       ├── ViewModels/
-│       └── Models/
-├── Core/
-│   ├── Network/
-│   │   ├── APIClient.swift
-│   │   └── Endpoints.swift
-│   ├── Storage/
-│   │   └── UserDefaults+Extensions.swift
-│   └── Utilities/
-│       └── DateFormatter+Extensions.swift
-├── Resources/
-│   ├── Assets.xcassets
-│   └── Localizable.strings
-└── Tests/
-    ├── UnitTests/
-    └── UITests/
-```
-
 ### File Naming
 
 ```
@@ -606,6 +545,9 @@ func fetchMarkets(status: MarketStatus?, limit: Int = 20) async throws -> [Marke
 
 ### MARK Comments
 
+- Don't use MARK for everything.
+
+- BAD: MARK comments
 ```swift
 // MARK: - Properties
 
@@ -627,6 +569,19 @@ func loadMarkets() async {
 // MARK: - Private Methods
 
 private func processMarkets(_ markets: [Market]) {
+    // ...
+}
+```
+
+- GOOD: MARK comments
+```swift
+final class MarketViewModel: ObservableObject {
+    // ...
+}
+
+// MARK: - Setup UI
+
+private func setupUI() {
     // ...
 }
 ```
