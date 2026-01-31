@@ -82,19 +82,27 @@ For each design decision, document:
 
 ## Common Patterns
 
-### Frontend Patterns
-- **Component Composition**: Build complex UI from simple components
-- **Container/Presenter**: Separate data logic from presentation
-- **Custom Hooks**: Reusable stateful logic
-- **Context for Global State**: Avoid prop drilling
-- **Code Splitting**: Lazy load routes and heavy components
+### iOS/App Patterns
+- **MVP (Model-View-Presenter)**: View holds Presenter, Presenter handles logic and updates View via protocol
+- **Coordinator Pattern**: Separate navigation logic from ViewController
+- **Protocol-Oriented Programming**: Define View/Presenter interfaces using protocols
+- **Dependency Injection**: Choose appropriate method based on use case (see criteria below)
+- **Delegate/Closure Pattern**: Component communication and callbacks
 
-### Backend Patterns
-- **Repository Pattern**: Abstract data access
-- **Service Layer**: Business logic separation
-- **Middleware Pattern**: Request/response processing
-- **Event-Driven Architecture**: Async operations
-- **CQRS**: Separate read and write operations
+#### Dependency Injection Selection Criteria
+
+| Method | Use Case | Pros | Cons |
+|--------|----------|------|------|
+| **Init Injection** | Dependency is required and immutable | Guarantees object completeness, immutable, easy to test | Parameter list may grow |
+| **Property Injection** | Dependency is optional, needs delayed setup, or has circular dependency | High flexibility, solves circular dependencies | May forget to set, uncertain object state |
+| **Method Injection** | Dependency only needed for specific operations, or varies per call | Maximum flexibility, clear responsibility | Must pass on every call |
+
+### Data/Service Patterns
+- **Repository Pattern**: Abstract GRDB data access with unified interface
+- **Service Layer**: Encapsulate business logic in UseCase / Interactor
+- **async/await**: Modern async operations for network and database
+- **Actor Pattern**: Manage concurrent access to shared state
+- **DTO Pattern**: Separate network/database models from domain models
 
 ### Data Patterns
 - **Normalized Database**: Reduce redundancy
@@ -108,31 +116,30 @@ For each design decision, document:
 For significant architectural decisions, create ADRs:
 
 ```markdown
-# ADR-001: Use Redis for Semantic Search Vector Storage
+# ADR-001: Use GRDB for Local Data Persistence
 
 ## Context
-Need to store and query 1536-dimensional embeddings for semantic market search.
+Need local data storage with support for complex queries and high-performance read/write.
 
 ## Decision
-Use Redis Stack with vector search capability.
+Use GRDB as SQLite wrapper.
 
 ## Consequences
 
 ### Positive
-- Fast vector similarity search (<10ms)
-- Built-in KNN algorithm
-- Simple deployment
-- Good performance up to 100K vectors
+- Full SQL control
+- High-performance batch operations
+- Support for migration and schema evolution
+- Good integration with Swift Codable
 
 ### Negative
-- In-memory storage (expensive for large datasets)
-- Single point of failure without clustering
-- Limited to cosine similarity
+- Manual schema management required
+- Steeper learning curve than Core Data
 
 ### Alternatives Considered
-- **PostgreSQL pgvector**: Slower, but persistent storage
-- **Pinecone**: Managed service, higher cost
-- **Weaviate**: More features, more complex setup
+- **Core Data**: Apple native, but complex API
+- **Realm**: Easy to use, but has thread limitations
+- **SwiftData**: Too new, tied to SwiftUI
 
 ## Status
 Accepted
@@ -185,27 +192,28 @@ Watch for these architectural anti-patterns:
 
 ## Project-Specific Architecture (Example)
 
-Example architecture for an AI-powered SaaS platform:
+Example architecture for an iOS application:
 
 ### Current Architecture
-- **Frontend**: Next.js 15 (Vercel/Cloud Run)
-- **Backend**: FastAPI or Express (Cloud Run/Railway)
-- **Database**: PostgreSQL (Supabase)
-- **Cache**: Redis (Upstash/Railway)
-- **AI**: Claude API with structured output
-- **Real-time**: Supabase subscriptions
+- **UI Layer**: UIKit + Auto Layout (SnapKit optional)
+- **Architecture**: MVP + Coordinator
+- **Data Layer**: GRDB + Repository Pattern
+- **Network Layer**: URLSession + async/await
+- **Dependency Management**: Swift Package Manager
+- **DI**: Manual injection or Swinject
 
 ### Key Design Decisions
-1. **Hybrid Deployment**: Vercel (frontend) + Cloud Run (backend) for optimal performance
-2. **AI Integration**: Structured output with Pydantic/Zod for type safety
-3. **Real-time Updates**: Supabase subscriptions for live data
-4. **Immutable Patterns**: Spread operators for predictable state
+1. **MVP Pattern**: Clear separation between View and business logic via Presenter
+2. **Coordinator Pattern**: Navigation logic centralized, ViewControllers remain reusable
+3. **Repository Pattern**: Abstract GRDB access, easy to mock for testing
+4. **Protocol-First**: Define interfaces before implementations
 5. **Many Small Files**: High cohesion, low coupling
 
 ### Scalability Plan
-- **10K users**: Current architecture sufficient
-- **100K users**: Add Redis clustering, CDN for static assets
-- **1M users**: Microservices architecture, separate read/write databases
-- **10M users**: Event-driven architecture, distributed caching, multi-region
+- **Performance**: Instruments profiling, avoid main thread blocking
+- **Offline Support**: GRDB local cache + sync strategy
+- **App Size**: Asset optimization, on-demand resources
+- **Modularization**: Feature modules with SPM local packages
+- **Testing**: Unit test Presenter, UI test critical flows
 
 **Remember**: Good architecture enables rapid development, easy maintenance, and confident scaling. The best architecture is simple, clear, and follows established patterns.

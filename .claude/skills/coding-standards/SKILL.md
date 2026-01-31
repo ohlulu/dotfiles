@@ -389,39 +389,13 @@ struct Market: Entity {
 
 ### Dependency Injection with Protocols
 
-```swift
-// GOOD: Protocol for testability
-protocol MarketServiceProtocol {
-    func fetchMarkets() async throws -> [Market]
-    func createMarket(_ market: Market) async throws -> Market
-}
+**Selection Criteria**:
 
-class MarketService: MarketServiceProtocol {
-    func fetchMarkets() async throws -> [Market] {
-        // Real implementation
-    }
-
-    func createMarket(_ market: Market) async throws -> Market {
-        // Real implementation
-    }
-}
-
-// For testing
-class MockMarketService: MarketServiceProtocol {
-    var marketsToReturn: [Market] = []
-    var shouldThrowError = false
-
-    func fetchMarkets() async throws -> [Market] {
-        if shouldThrowError { throw TestError.mock }
-        return marketsToReturn
-    }
-
-    func createMarket(_ market: Market) async throws -> Market {
-        if shouldThrowError { throw TestError.mock }
-        return market
-    }
-}
-```
+| Method                | Suitable Scenarios                                                      | Advantages                                             | Disadvantages                                    |
+|-----------------------|------------------------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------|
+| **Init Injection**    | - Dependency is required<br>- Dependency is immutable                   | - Ensures object integrity<br>- Immutability<br>- Easy to test | - Number of constructor parameters may increase    |
+| **Property Injection**| - Dependency is optional<br>- Set later<br>- Needed for cyclic dependencies | - High flexibility<br>- Helpful for circular dependencies      | - Might forget to set<br>- Object state may be uncertain |
+| **Method Injection**  | - Dependency only needed for specific actions<br>- May change per call  | - Maximum flexibility<br>- Clear responsibility        | - Must pass dependency with each invocation        |
 
 ### File Naming
 
