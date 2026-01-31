@@ -166,4 +166,5 @@
   "accessibility.signals.lineHasWarning": {
     "sound": "off"
   },
+  "cursor.composer.usageSummaryDisplay": "always",
 }

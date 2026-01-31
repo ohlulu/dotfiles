@@ -104,3 +104,10 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 ssh-add --apple-load-keychain 2> /dev/null
 export PATH="$HOME/.local/bin:$PATH"
+
+# bun completions
+[ -s "/Users/ohlulu/.bun/_bun" ] && source "/Users/ohlulu/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
